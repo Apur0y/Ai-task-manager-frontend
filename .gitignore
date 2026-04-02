@@ -1,0 +1,37 @@
+node_modules
+.env.local
+.env.*.local
+.env.production.local
+.env.development.local
+.next
+.turbo
+dist
+build
+
+# IDE & Editor
+.vscode
+.idea
+*.swp
+*.swo
+*.sublime-workspace
+.DS_Store
+.cache
+
+# npm/yarn
+.npm
+.yarn
+yarn-error.log
+npm-debug.log*
+lerna-debug.log*
+
+# Testing
+coverage
+.nyc_output
+
+# Misc
+*.pem
+.pnp
+.pnp.js
+
+# OS
+Thumbs.db

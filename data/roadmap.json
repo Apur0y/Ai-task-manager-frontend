@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "title": "3-Month Dev Roadmap",
+    "startDate": "2026-04-03",
+    "totalWeeks": 12
+  },
+  "weeks": [
+    {
+      "id": "w1",
+      "week": 1,
+      "month": 1,
+      "theme": "Docker + Arrays & Strings",
+      "days": [
+        {
+          "id": "w1d1",
+          "weekId": "w1",
+          "date": "2026-04-06",
+          "dayLabel": "Monday",
+          "tasks": [
+            {
+              "id": "t001",
+              "type": "dsa",
+              "title": "Two Sum",
+              "ref": "Leetcode #1",
+              "description": "Classic hash map problem. Understand O(n) vs O(n²) approach.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 45,
+              "resources": [
+                { "label": "NeetCode video", "url": "https://www.youtube.com/watch?v=KLlXCFG5TnA" },
+                { "label": "Leetcode #1", "url": "https://leetcode.com/problems/two-sum/" }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t002",
+              "type": "tech",
+              "title": "Install Docker & run first container",
+              "ref": "Docker Week 1",
+              "description": "Install Docker Desktop. Run hello-world. Run nginx. Understand images vs containers.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 60,
+              "resources": [
+                { "label": "Docker official docs", "url": "https://docs.docker.com/get-started/" },
+                { "label": "Fireship Docker 100s", "url": "https://www.youtube.com/watch?v=Gjnup-PuquQ" }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w1d2",
+          "weekId": "w1",
+          "date": "2026-04-07",
+          "dayLabel": "Tuesday",
+          "tasks": [
+            {
+              "id": "t003",
+              "type": "dsa",
+              "title": "Valid Anagram",
+              "ref": "Leetcode #242 / NeetCode #2",
+              "description": "Sort approach vs hash map approach. Practice thinking about trade-offs out loud.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 45,
+              "resources": [
+                { "label": "NeetCode video", "url": "https://www.youtube.com/watch?v=9UtInBqnCgA" },
+                { "label": "Leetcode #242", "url": "https://leetcode.com/problems/valid-anagram/" }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t004",
+              "type": "tech",
+              "title": "Write your first Dockerfile",
+              "ref": "Docker Week 1",
+              "description": "Containerise an existing Node/Express project. Understand FROM, COPY, RUN, CMD.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                { "label": "TechWorld with Nana", "url": "https://www.youtube.com/watch?v=3c-iBn73dDE" },
+                { "label": "Dockerfile reference", "url": "https://docs.docker.com/reference/dockerfile/" }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w1d3",
+          "weekId": "w1",
+          "date": "2026-04-08",
+          "dayLabel": "Wednesday",
+          "tasks": [
+            {
+              "id": "t005",
+              "type": "dsa",
+              "title": "Contains Duplicate",
+              "ref": "Leetcode #217 / NeetCode #1",
+              "description": "Use a Set. Understand space vs time trade-off. Very fast solve — aim for under 15 min.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 30,
+              "resources": [
+                { "label": "NeetCode video", "url": "https://www.youtube.com/watch?v=3OamzN90kPg" },
+                { "label": "Leetcode #217", "url": "https://leetcode.com/problems/contains-duplicate/" }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t006",
+              "type": "tech",
+              "title": "Docker compose — multi-container app",
+              "ref": "Docker Week 1",
+              "description": "Run your Node app + Postgres together using docker-compose.yml. Push to GitHub.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                { "label": "Docker Compose docs", "url": "https://docs.docker.com/compose/" },
+                { "label": "TechWorld Nana Compose", "url": "https://www.youtube.com/watch?v=SXwC9fSwct8" }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w1d4",
+          "weekId": "w1",
+          "date": "2026-04-09",
+          "dayLabel": "Thursday",
+          "tasks": [
+            {
+              "id": "t007",
+              "type": "dsa",
+              "title": "Group Anagrams",
+              "ref": "Leetcode #49 / NeetCode #3",
+              "description": "Hash map with sorted string as key. Medium difficulty — spend full 45 min.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 45,
+              "resources": [
+                { "label": "NeetCode video", "url": "https://www.youtube.com/watch?v=vzdNOK2oB2E" },
+                { "label": "Leetcode #49", "url": "https://leetcode.com/problems/group-anagrams/" }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t008",
+              "type": "tech",
+              "title": "GitHub Actions — basic CI pipeline",
+              "ref": "DevOps Week 1",
+              "description": "Create .github/workflows/ci.yml. Run lint + build on every push. Badge on README.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 60,
+              "resources": [
+                { "label": "GitHub Actions docs", "url": "https://docs.github.com/en/actions/quickstart" },
+                { "label": "Traversy CI/CD crash course", "url": "https://www.youtube.com/watch?v=R8_veQiYBjI" }
+              ],
+              "notes": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2",
+      "week": 2,
+      "month": 1,
+      "theme": "CI/CD + Binary Search & Two Pointers",
+      "days": [
+        {
+          "id": "w2d1",
+          "weekId": "w2",
+          "date": "2026-04-13",
+          "dayLabel": "Monday",
+          "tasks": [
+            {
+              "id": "t009",
+              "type": "dsa",
+              "title": "Binary Search",
+              "ref": "Leetcode #704 / NeetCode #27",
+              "description": "Master the template. Left/right pointer. Avoid off-by-one errors. Solve 3 variants.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 45,
+              "resources": [
+                { "label": "NeetCode video", "url": "https://www.youtube.com/watch?v=s4DPM8ct1pI" },
+                { "label": "Leetcode #704", "url": "https://leetcode.com/problems/binary-search/" }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t010",
+              "type": "tech",
+              "title": "GitHub Actions — deploy to server on merge",
+              "ref": "DevOps Week 2",
+              "description": "Extend CI with CD step. SSH into server and pull latest Docker image on main merge.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                { "label": "GitHub Actions deploy", "url": "https://docs.github.com/en/actions/use-cases-and-examples/deploying/deploying-with-github-actions" }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w2d2",
+          "weekId": "w2",
+          "date": "2026-04-14",
+          "dayLabel": "Tuesday",
+          "tasks": [
+            {
+              "id": "t011",
+              "type": "dsa",
+              "title": "Two Sum II (sorted array)",
+              "ref": "Leetcode #167 / NeetCode #35",
+              "description": "Two pointer pattern. No extra space allowed. Classic intro to the pattern.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 45,
+              "resources": [
+                { "label": "NeetCode video", "url": "https://www.youtube.com/watch?v=cQ1Oz4ckceM" },
+                { "label": "Leetcode #167", "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/" }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t012",
+              "type": "tech",
+              "title": "AWS account setup + IAM basics",
+              "ref": "AWS Week 2",
+              "description": "Create AWS account. Set up IAM user (never use root). Understand regions and AZs.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 60,
+              "resources": [
+                { "label": "AWS Cloud Practitioner Essentials", "url": "https://explore.skillbuilder.aws/learn/course/134/aws-cloud-practitioner-essentials" },
+                { "label": "FreeCodeCamp AWS Course", "url": "https://www.youtube.com/watch?v=SOTamWNgDKc" }
+              ],
+              "notes": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w5",
+      "week": 5,
+      "month": 2,
+      "theme": "AI Engineering — OpenAI + Vercel AI SDK",
+      "days": [
+        {
+          "id": "w5d1",
+          "weekId": "w5",
+          "date": "2026-05-04",
+          "dayLabel": "Monday",
+          "tasks": [
+            {
+              "id": "t020",
+              "type": "dsa",
+              "title": "Reverse Linked List",
+              "ref": "Leetcode #206 / NeetCode #43",
+              "description": "Iterative AND recursive. Must know both. Draw the pointer manipulation on paper first.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 45,
+              "resources": [
+                { "label": "NeetCode video", "url": "https://www.youtube.com/watch?v=G0_I-ZF0S38" },
+                { "label": "Leetcode #206", "url": "https://leetcode.com/problems/reverse-linked-list/" }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t021",
+              "type": "tech",
+              "title": "Vercel AI SDK — build a basic chat UI",
+              "ref": "AI Engineering Week 5",
+              "description": "Set up Next.js app with Vercel AI SDK. Stream responses. Build a simple chat interface with useChat hook.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                { "label": "Vercel AI SDK docs", "url": "https://sdk.vercel.ai/docs" },
+                { "label": "Josh tried coding AI app", "url": "https://www.youtube.com/watch?v=ferZy364oCc" }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w5d2",
+          "weekId": "w5",
+          "date": "2026-05-05",
+          "dayLabel": "Tuesday",
+          "tasks": [
+            {
+              "id": "t022",
+              "type": "concept",
+              "title": "LLM concepts — tokens, context window, temperature",
+              "ref": "AI Concepts #1",
+              "description": "Understand how LLMs work at a practical level. Tokens, embeddings, temperature, top-p. You'll be asked this in interviews.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 45,
+              "resources": [
+                { "label": "Anthropic docs — intro to Claude", "url": "https://docs.anthropic.com/en/docs/intro-to-claude" },
+                { "label": "OpenAI tokenizer tool", "url": "https://platform.openai.com/tokenizer" },
+                { "label": "3Blue1Brown — transformers", "url": "https://www.youtube.com/watch?v=wjZofJX0v4M" }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t023",
+              "type": "tech",
+              "title": "LangChain.js — chains and prompt templates",
+              "ref": "AI Engineering Week 5",
+              "description": "Build a basic chain. Understand PromptTemplate, LLMChain, output parsers. Connect to OpenAI or Anthropic.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                { "label": "LangChain JS quickstart", "url": "https://js.langchain.com/docs/tutorials/llm_chain" },
+                { "label": "LangChain JS docs", "url": "https://js.langchain.com/docs/introduction/" }
+              ],
+              "notes": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w9",
+      "week": 9,
+      "month": 3,
+      "theme": "PostgreSQL deep dive + Basic DP",
+      "days": [
+        {
+          "id": "w9d1",
+          "weekId": "w9",
+          "date": "2026-06-01",
+          "dayLabel": "Monday",
+          "tasks": [
+            {
+              "id": "t030",
+              "type": "dsa",
+              "title": "Climbing Stairs",
+              "ref": "Leetcode #70 / NeetCode #64",
+              "description": "Your first DP problem. See the Fibonacci pattern. Solve with recursion first, then memoization, then bottom-up.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 45,
+              "resources": [
+                { "label": "NeetCode video", "url": "https://www.youtube.com/watch?v=Y0lT9Fck7qI" },
+                { "label": "Leetcode #70", "url": "https://leetcode.com/problems/climbing-stairs/" }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t031",
+              "type": "tech",
+              "title": "PostgreSQL indexing — understand EXPLAIN ANALYZE",
+              "ref": "PostgreSQL Week 9",
+              "description": "Run EXPLAIN ANALYZE on slow queries. Create indexes. See the difference. Understand B-tree vs Hash index.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                { "label": "PostgreSQL tutorial — indexes", "url": "https://www.postgresqltutorial.com/postgresql-indexes/" },
+                { "label": "Hussein Nasser Postgres", "url": "https://www.youtube.com/watch?v=oebtXK16WuU" }
+              ],
+              "notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "taskTypes": {
+    "dsa": { "label": "DSA", "color": "green" },
+    "tech": { "label": "Tech / Build", "color": "blue" },
+    "concept": { "label": "Concept", "color": "purple" },
+    "revision": { "label": "Revision", "color": "gray" },
+    "profile": { "label": "Profile", "color": "amber" }
+  }
+}
