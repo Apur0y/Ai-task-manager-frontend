@@ -18,22 +18,28 @@
           "dayLabel": "Monday",
           "tasks": [
             {
-              "id": "t001",
+              "id": "t035",
               "type": "dsa",
               "title": "Two Sum",
               "ref": "Leetcode #1",
-              "description": "Classic hash map problem. Understand O(n) vs O(n²) approach.",
+              "description": "Classic hash map problem. Understand O(n) vs O(n\u00b2) approach.",
               "status": "pending",
               "priority": "high",
               "estimatedMin": 45,
               "resources": [
-                { "label": "NeetCode video", "url": "https://www.youtube.com/watch?v=KLlXCFG5TnA" },
-                { "label": "Leetcode #1", "url": "https://leetcode.com/problems/two-sum/" }
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=KLlXCFG5TnA"
+                },
+                {
+                  "label": "Leetcode #1",
+                  "url": "https://leetcode.com/problems/two-sum/"
+                }
               ],
               "notes": ""
             },
             {
-              "id": "t002",
+              "id": "t036",
               "type": "tech",
               "title": "Install Docker & run first container",
               "ref": "Docker Week 1",
@@ -42,8 +48,14 @@
               "priority": "high",
               "estimatedMin": 60,
               "resources": [
-                { "label": "Docker official docs", "url": "https://docs.docker.com/get-started/" },
-                { "label": "Fireship Docker 100s", "url": "https://www.youtube.com/watch?v=Gjnup-PuquQ" }
+                {
+                  "label": "Docker official docs",
+                  "url": "https://docs.docker.com/get-started/"
+                },
+                {
+                  "label": "Fireship Docker 100s",
+                  "url": "https://www.youtube.com/watch?v=Gjnup-PuquQ"
+                }
               ],
               "notes": ""
             }
@@ -56,22 +68,28 @@
           "dayLabel": "Tuesday",
           "tasks": [
             {
-              "id": "t003",
+              "id": "t037",
               "type": "dsa",
               "title": "Valid Anagram",
-              "ref": "Leetcode #242 / NeetCode #2",
+              "ref": "Leetcode #242",
               "description": "Sort approach vs hash map approach. Practice thinking about trade-offs out loud.",
               "status": "pending",
               "priority": "high",
               "estimatedMin": 45,
               "resources": [
-                { "label": "NeetCode video", "url": "https://www.youtube.com/watch?v=9UtInBqnCgA" },
-                { "label": "Leetcode #242", "url": "https://leetcode.com/problems/valid-anagram/" }
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=9UtInBqnCgA"
+                },
+                {
+                  "label": "Leetcode #242",
+                  "url": "https://leetcode.com/problems/valid-anagram/"
+                }
               ],
               "notes": ""
             },
             {
-              "id": "t004",
+              "id": "t038",
               "type": "tech",
               "title": "Write your first Dockerfile",
               "ref": "Docker Week 1",
@@ -80,8 +98,14 @@
               "priority": "high",
               "estimatedMin": 90,
               "resources": [
-                { "label": "TechWorld with Nana", "url": "https://www.youtube.com/watch?v=3c-iBn73dDE" },
-                { "label": "Dockerfile reference", "url": "https://docs.docker.com/reference/dockerfile/" }
+                {
+                  "label": "TechWorld with Nana",
+                  "url": "https://www.youtube.com/watch?v=3c-iBn73dDE"
+                },
+                {
+                  "label": "Dockerfile reference",
+                  "url": "https://docs.docker.com/reference/dockerfile/"
+                }
               ],
               "notes": ""
             }
@@ -94,32 +118,44 @@
           "dayLabel": "Wednesday",
           "tasks": [
             {
-              "id": "t005",
+              "id": "t039",
               "type": "dsa",
               "title": "Contains Duplicate",
-              "ref": "Leetcode #217 / NeetCode #1",
-              "description": "Use a Set. Understand space vs time trade-off. Very fast solve — aim for under 15 min.",
+              "ref": "Leetcode #217",
+              "description": "Use a Set. Understand space vs time trade-off. Very fast solve \u2014 aim for under 15 min.",
               "status": "pending",
               "priority": "medium",
               "estimatedMin": 30,
               "resources": [
-                { "label": "NeetCode video", "url": "https://www.youtube.com/watch?v=3OamzN90kPg" },
-                { "label": "Leetcode #217", "url": "https://leetcode.com/problems/contains-duplicate/" }
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=3OamzN90kPg"
+                },
+                {
+                  "label": "Leetcode #217",
+                  "url": "https://leetcode.com/problems/contains-duplicate/"
+                }
               ],
               "notes": ""
             },
             {
-              "id": "t006",
+              "id": "t040",
               "type": "tech",
-              "title": "Docker compose — multi-container app",
+              "title": "Docker Compose \u2014 multi-container app",
               "ref": "Docker Week 1",
-              "description": "Run your Node app + Postgres together using docker-compose.yml. Push to GitHub.",
+              "description": "Run Node app + Postgres together using docker-compose.yml. Push to GitHub.",
               "status": "pending",
               "priority": "high",
               "estimatedMin": 90,
               "resources": [
-                { "label": "Docker Compose docs", "url": "https://docs.docker.com/compose/" },
-                { "label": "TechWorld Nana Compose", "url": "https://www.youtube.com/watch?v=SXwC9fSwct8" }
+                {
+                  "label": "Docker Compose docs",
+                  "url": "https://docs.docker.com/compose/"
+                },
+                {
+                  "label": "TechWorld Nana Compose",
+                  "url": "https://www.youtube.com/watch?v=SXwC9fSwct8"
+                }
               ],
               "notes": ""
             }
@@ -132,32 +168,44 @@
           "dayLabel": "Thursday",
           "tasks": [
             {
-              "id": "t007",
+              "id": "t041",
               "type": "dsa",
               "title": "Group Anagrams",
-              "ref": "Leetcode #49 / NeetCode #3",
-              "description": "Hash map with sorted string as key. Medium difficulty — spend full 45 min.",
+              "ref": "Leetcode #49",
+              "description": "Hash map with sorted string as key. Medium difficulty \u2014 spend full 45 min.",
               "status": "pending",
               "priority": "high",
               "estimatedMin": 45,
               "resources": [
-                { "label": "NeetCode video", "url": "https://www.youtube.com/watch?v=vzdNOK2oB2E" },
-                { "label": "Leetcode #49", "url": "https://leetcode.com/problems/group-anagrams/" }
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=vzdNOK2oB2E"
+                },
+                {
+                  "label": "Leetcode #49",
+                  "url": "https://leetcode.com/problems/group-anagrams/"
+                }
               ],
               "notes": ""
             },
             {
-              "id": "t008",
+              "id": "t042",
               "type": "tech",
-              "title": "GitHub Actions — basic CI pipeline",
+              "title": "GitHub Actions \u2014 basic CI pipeline",
               "ref": "DevOps Week 1",
               "description": "Create .github/workflows/ci.yml. Run lint + build on every push. Badge on README.",
               "status": "pending",
               "priority": "high",
               "estimatedMin": 60,
               "resources": [
-                { "label": "GitHub Actions docs", "url": "https://docs.github.com/en/actions/quickstart" },
-                { "label": "Traversy CI/CD crash course", "url": "https://www.youtube.com/watch?v=R8_veQiYBjI" }
+                {
+                  "label": "GitHub Actions docs",
+                  "url": "https://docs.github.com/en/actions/quickstart"
+                },
+                {
+                  "label": "Traversy CI/CD crash course",
+                  "url": "https://www.youtube.com/watch?v=R8_veQiYBjI"
+                }
               ],
               "notes": ""
             }
@@ -178,31 +226,40 @@
           "dayLabel": "Monday",
           "tasks": [
             {
-              "id": "t009",
+              "id": "t043",
               "type": "dsa",
               "title": "Binary Search",
-              "ref": "Leetcode #704 / NeetCode #27",
+              "ref": "Leetcode #704",
               "description": "Master the template. Left/right pointer. Avoid off-by-one errors. Solve 3 variants.",
               "status": "pending",
               "priority": "high",
               "estimatedMin": 45,
               "resources": [
-                { "label": "NeetCode video", "url": "https://www.youtube.com/watch?v=s4DPM8ct1pI" },
-                { "label": "Leetcode #704", "url": "https://leetcode.com/problems/binary-search/" }
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=s4DPM8ct1pI"
+                },
+                {
+                  "label": "Leetcode #704",
+                  "url": "https://leetcode.com/problems/binary-search/"
+                }
               ],
               "notes": ""
             },
             {
-              "id": "t010",
+              "id": "t044",
               "type": "tech",
-              "title": "GitHub Actions — deploy to server on merge",
+              "title": "GitHub Actions \u2014 deploy to server on merge",
               "ref": "DevOps Week 2",
               "description": "Extend CI with CD step. SSH into server and pull latest Docker image on main merge.",
               "status": "pending",
               "priority": "high",
               "estimatedMin": 90,
               "resources": [
-                { "label": "GitHub Actions deploy", "url": "https://docs.github.com/en/actions/use-cases-and-examples/deploying/deploying-with-github-actions" }
+                {
+                  "label": "GitHub Actions deploy",
+                  "url": "https://docs.github.com/en/actions/use-cases-and-examples/deploying/deploying-with-github-actions"
+                }
               ],
               "notes": ""
             }
@@ -215,22 +272,28 @@
           "dayLabel": "Tuesday",
           "tasks": [
             {
-              "id": "t011",
+              "id": "t045",
               "type": "dsa",
               "title": "Two Sum II (sorted array)",
-              "ref": "Leetcode #167 / NeetCode #35",
+              "ref": "Leetcode #167",
               "description": "Two pointer pattern. No extra space allowed. Classic intro to the pattern.",
               "status": "pending",
               "priority": "high",
               "estimatedMin": 45,
               "resources": [
-                { "label": "NeetCode video", "url": "https://www.youtube.com/watch?v=cQ1Oz4ckceM" },
-                { "label": "Leetcode #167", "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/" }
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=cQ1Oz4ckceM"
+                },
+                {
+                  "label": "Leetcode #167",
+                  "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"
+                }
               ],
               "notes": ""
             },
             {
-              "id": "t012",
+              "id": "t046",
               "type": "tech",
               "title": "AWS account setup + IAM basics",
               "ref": "AWS Week 2",
@@ -239,8 +302,526 @@
               "priority": "medium",
               "estimatedMin": 60,
               "resources": [
-                { "label": "AWS Cloud Practitioner Essentials", "url": "https://explore.skillbuilder.aws/learn/course/134/aws-cloud-practitioner-essentials" },
-                { "label": "FreeCodeCamp AWS Course", "url": "https://www.youtube.com/watch?v=SOTamWNgDKc" }
+                {
+                  "label": "AWS Cloud Practitioner Essentials",
+                  "url": "https://explore.skillbuilder.aws/learn/course/134/aws-cloud-practitioner-essentials"
+                },
+                {
+                  "label": "FreeCodeCamp AWS Course",
+                  "url": "https://www.youtube.com/watch?v=SOTamWNgDKc"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w2d3",
+          "weekId": "w2",
+          "date": "2026-04-15",
+          "dayLabel": "Wednesday",
+          "tasks": [
+            {
+              "id": "t047",
+              "type": "dsa",
+              "title": "3Sum",
+              "ref": "Leetcode #15",
+              "description": "Two pointers inside a loop. Sort first. Skip duplicates carefully. Classic medium.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 60,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=jzZsG8n2R9A"
+                },
+                {
+                  "label": "Leetcode #15",
+                  "url": "https://leetcode.com/problems/3sum/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t048",
+              "type": "tech",
+              "title": "Docker image to AWS ECR",
+              "ref": "AWS/Docker Week 2",
+              "description": "Build Docker image. Tag and push to Amazon ECR. Understand private registries.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 75,
+              "resources": [
+                {
+                  "label": "AWS ECR docs",
+                  "url": "https://docs.aws.amazon.com/AmazonECR/latest/userguide/getting-started-cli.html"
+                },
+                {
+                  "label": "Push to ECR tutorial",
+                  "url": "https://www.youtube.com/watch?v=vGab4v3RWEw"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w2d4",
+          "weekId": "w2",
+          "date": "2026-04-16",
+          "dayLabel": "Thursday",
+          "tasks": [
+            {
+              "id": "t049",
+              "type": "dsa",
+              "title": "Container With Most Water",
+              "ref": "Leetcode #11",
+              "description": "Greedy two pointer. Understand WHY moving the smaller pointer is correct.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 45,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=UuiTKBwPgAo"
+                },
+                {
+                  "label": "Leetcode #11",
+                  "url": "https://leetcode.com/problems/container-with-most-water/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t050",
+              "type": "tech",
+              "title": "Nginx reverse proxy in Docker",
+              "ref": "DevOps Week 2",
+              "description": "Use Nginx as reverse proxy in docker-compose. Route /api to backend, / to frontend.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "Nginx Docker guide",
+                  "url": "https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/"
+                },
+                {
+                  "label": "Fireship Nginx tutorial",
+                  "url": "https://www.youtube.com/watch?v=7VAI73roXaY"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w3",
+      "week": 3,
+      "month": 1,
+      "theme": "AWS Fundamentals + Sliding Window & Stack",
+      "days": [
+        {
+          "id": "w3d1",
+          "weekId": "w3",
+          "date": "2026-04-20",
+          "dayLabel": "Monday",
+          "tasks": [
+            {
+              "id": "t051",
+              "type": "dsa",
+              "title": "Best Time to Buy & Sell Stock",
+              "ref": "Leetcode #121",
+              "description": "Sliding window / greedy. Track min price seen so far. Very common interview question.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 40,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=1pkOgXD63yU"
+                },
+                {
+                  "label": "Leetcode #121",
+                  "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t052",
+              "type": "tech",
+              "title": "Launch EC2 instance + SSH in",
+              "ref": "AWS Week 3",
+              "description": "Launch t2.micro. Configure security group. SSH in. Install Node. Deploy your app manually.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "AWS EC2 getting started",
+                  "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html"
+                },
+                {
+                  "label": "TechWorld EC2 tutorial",
+                  "url": "https://www.youtube.com/watch?v=iHX-jtKIVNA"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w3d2",
+          "weekId": "w3",
+          "date": "2026-04-21",
+          "dayLabel": "Tuesday",
+          "tasks": [
+            {
+              "id": "t053",
+              "type": "dsa",
+              "title": "Longest Substring Without Repeating Characters",
+              "ref": "Leetcode #3",
+              "description": "Sliding window with a set. Expand right, shrink left. Classic medium.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 50,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=wiGpQwVHdE0"
+                },
+                {
+                  "label": "Leetcode #3",
+                  "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t054",
+              "type": "tech",
+              "title": "AWS S3 \u2014 upload & serve files",
+              "ref": "AWS Week 3",
+              "description": "Create S3 bucket. Upload files via SDK. Set bucket policy. Generate pre-signed URLs.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 75,
+              "resources": [
+                {
+                  "label": "AWS S3 docs",
+                  "url": "https://docs.aws.amazon.com/s3/index.html"
+                },
+                {
+                  "label": "Traversy S3 tutorial",
+                  "url": "https://www.youtube.com/watch?v=NZElg91l_ms"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w3d3",
+          "weekId": "w3",
+          "date": "2026-04-22",
+          "dayLabel": "Wednesday",
+          "tasks": [
+            {
+              "id": "t055",
+              "type": "dsa",
+              "title": "Longest Repeating Character Replacement",
+              "ref": "Leetcode #424",
+              "description": "Sliding window. Track max frequency char. The (window - maxFreq > k) condition is the key insight.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 60,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=gqXU1UyA8pk"
+                },
+                {
+                  "label": "Leetcode #424",
+                  "url": "https://leetcode.com/problems/longest-repeating-character-replacement/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t056",
+              "type": "tech",
+              "title": "AWS RDS \u2014 managed Postgres",
+              "ref": "AWS Week 3",
+              "description": "Launch RDS Postgres instance. Connect from local. Connect from EC2. Understand security groups for DB access.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "AWS RDS getting started",
+                  "url": "https://aws.amazon.com/rds/getting-started/"
+                },
+                {
+                  "label": "Hussein Nasser RDS",
+                  "url": "https://www.youtube.com/watch?v=vw5o6D9s7s8"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w3d4",
+          "weekId": "w3",
+          "date": "2026-04-23",
+          "dayLabel": "Thursday",
+          "tasks": [
+            {
+              "id": "t057",
+              "type": "dsa",
+              "title": "Valid Parentheses",
+              "ref": "Leetcode #20",
+              "description": "Stack-based. Push open brackets, pop on close. Handle edge cases like empty stack.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 35,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=WTzjTskDFMg"
+                },
+                {
+                  "label": "Leetcode #20",
+                  "url": "https://leetcode.com/problems/valid-parentheses/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t058",
+              "type": "tech",
+              "title": "AWS Load Balancer + Auto Scaling",
+              "ref": "AWS Week 3",
+              "description": "Set up ALB in front of EC2. Configure target group. Enable Auto Scaling Group with min 1 max 3.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "AWS ALB docs",
+                  "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html"
+                },
+                {
+                  "label": "FreeCodeCamp AWS ALB",
+                  "url": "https://www.youtube.com/watch?v=66VwVAHMSB0"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w4",
+      "week": 4,
+      "month": 1,
+      "theme": "AWS EC2/S3 + Linked Lists",
+      "days": [
+        {
+          "id": "w4d1",
+          "weekId": "w4",
+          "date": "2026-04-27",
+          "dayLabel": "Monday",
+          "tasks": [
+            {
+              "id": "t059",
+              "type": "dsa",
+              "title": "Reverse Linked List",
+              "ref": "Leetcode #206",
+              "description": "Iterative AND recursive. Must know both. Draw pointer manipulation on paper first.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 45,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=G0_I-ZF0S38"
+                },
+                {
+                  "label": "Leetcode #206",
+                  "url": "https://leetcode.com/problems/reverse-linked-list/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t060",
+              "type": "tech",
+              "title": "AWS Lambda \u2014 serverless functions",
+              "ref": "AWS Week 4",
+              "description": "Write first Lambda in Node.js. Trigger via API Gateway. Understand cold starts and execution context.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "AWS Lambda docs",
+                  "url": "https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html"
+                },
+                {
+                  "label": "Fireship Lambda tutorial",
+                  "url": "https://www.youtube.com/watch?v=eOBq__h4OJ4"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w4d2",
+          "weekId": "w4",
+          "date": "2026-04-28",
+          "dayLabel": "Tuesday",
+          "tasks": [
+            {
+              "id": "t061",
+              "type": "dsa",
+              "title": "Merge Two Sorted Lists",
+              "ref": "Leetcode #21",
+              "description": "Dummy head trick. Compare values, link nodes. Handle remaining nodes after loop.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 45,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=XIdigk956u0"
+                },
+                {
+                  "label": "Leetcode #21",
+                  "url": "https://leetcode.com/problems/merge-two-sorted-lists/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t062",
+              "type": "tech",
+              "title": "Serverless Framework + deploy",
+              "ref": "AWS Week 4",
+              "description": "Use Serverless Framework to define and deploy Lambda + API Gateway from YAML config.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 75,
+              "resources": [
+                {
+                  "label": "Serverless Framework docs",
+                  "url": "https://www.serverless.com/framework/docs"
+                },
+                {
+                  "label": "Serverless crash course",
+                  "url": "https://www.youtube.com/watch?v=woqLi6NEW58"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w4d3",
+          "weekId": "w4",
+          "date": "2026-04-29",
+          "dayLabel": "Wednesday",
+          "tasks": [
+            {
+              "id": "t063",
+              "type": "dsa",
+              "title": "Linked List Cycle",
+              "ref": "Leetcode #141",
+              "description": "Floyd's tortoise and hare. Slow & fast pointer. Classic O(1) space solution.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 40,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=gBTe7lFR3vc"
+                },
+                {
+                  "label": "Leetcode #141",
+                  "url": "https://leetcode.com/problems/linked-list-cycle/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t064",
+              "type": "tech",
+              "title": "AWS CloudWatch \u2014 logs & metrics",
+              "ref": "AWS Week 4",
+              "description": "Set up CloudWatch log groups. Create metric alarms. Monitor Lambda invocations and errors.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 60,
+              "resources": [
+                {
+                  "label": "CloudWatch docs",
+                  "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html"
+                },
+                {
+                  "label": "AWS CloudWatch tutorial",
+                  "url": "https://www.youtube.com/watch?v=a4dhoTQCyRA"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w4d4",
+          "weekId": "w4",
+          "date": "2026-04-30",
+          "dayLabel": "Thursday",
+          "tasks": [
+            {
+              "id": "t065",
+              "type": "dsa",
+              "title": "Reorder List",
+              "ref": "Leetcode #143",
+              "description": "Find middle (slow/fast), reverse second half, merge. Three steps \u2014 practice each separately.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 60,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=S5bfdUTrKLM"
+                },
+                {
+                  "label": "Leetcode #143",
+                  "url": "https://leetcode.com/problems/reorder-list/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t066",
+              "type": "tech",
+              "title": "Month 1 review + LinkedIn post",
+              "ref": "Review Week 4",
+              "description": "Review Docker, CI/CD, AWS concepts. Write a LinkedIn post about something you learned. Update your GitHub README.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 60,
+              "resources": [
+                {
+                  "label": "LinkedIn content tips",
+                  "url": "https://www.linkedin.com/help/linkedin/answer/a525429"
+                }
               ],
               "notes": ""
             }
@@ -252,7 +833,7 @@
       "id": "w5",
       "week": 5,
       "month": 2,
-      "theme": "AI Engineering — OpenAI + Vercel AI SDK",
+      "theme": "AI Engineering \u2014 OpenAI + Vercel AI SDK",
       "days": [
         {
           "id": "w5d1",
@@ -261,32 +842,44 @@
           "dayLabel": "Monday",
           "tasks": [
             {
-              "id": "t020",
+              "id": "t067",
               "type": "dsa",
-              "title": "Reverse Linked List",
-              "ref": "Leetcode #206 / NeetCode #43",
-              "description": "Iterative AND recursive. Must know both. Draw the pointer manipulation on paper first.",
+              "title": "Invert Binary Tree",
+              "ref": "Leetcode #226",
+              "description": "Recursive swap. Understand recursion depth. Also do iteratively with a queue (BFS).",
               "status": "pending",
               "priority": "high",
-              "estimatedMin": 45,
+              "estimatedMin": 35,
               "resources": [
-                { "label": "NeetCode video", "url": "https://www.youtube.com/watch?v=G0_I-ZF0S38" },
-                { "label": "Leetcode #206", "url": "https://leetcode.com/problems/reverse-linked-list/" }
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=OnSn2XEQ4MY"
+                },
+                {
+                  "label": "Leetcode #226",
+                  "url": "https://leetcode.com/problems/invert-binary-tree/"
+                }
               ],
               "notes": ""
             },
             {
-              "id": "t021",
+              "id": "t068",
               "type": "tech",
-              "title": "Vercel AI SDK — build a basic chat UI",
+              "title": "Vercel AI SDK \u2014 build a basic chat UI",
               "ref": "AI Engineering Week 5",
               "description": "Set up Next.js app with Vercel AI SDK. Stream responses. Build a simple chat interface with useChat hook.",
               "status": "pending",
               "priority": "high",
               "estimatedMin": 90,
               "resources": [
-                { "label": "Vercel AI SDK docs", "url": "https://sdk.vercel.ai/docs" },
-                { "label": "Josh tried coding AI app", "url": "https://www.youtube.com/watch?v=ferZy364oCc" }
+                {
+                  "label": "Vercel AI SDK docs",
+                  "url": "https://sdk.vercel.ai/docs"
+                },
+                {
+                  "label": "Josh tried coding AI app",
+                  "url": "https://www.youtube.com/watch?v=ferZy364oCc"
+                }
               ],
               "notes": ""
             }
@@ -299,33 +892,768 @@
           "dayLabel": "Tuesday",
           "tasks": [
             {
-              "id": "t022",
-              "type": "concept",
-              "title": "LLM concepts — tokens, context window, temperature",
-              "ref": "AI Concepts #1",
+              "id": "t069",
+              "type": "dsa",
+              "title": "Maximum Depth of Binary Tree",
+              "ref": "Leetcode #104",
+              "description": "DFS recursive (1 line!). Also do BFS level-order. Both approaches are interview valid.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 30,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=hTM3phVI6YQ"
+                },
+                {
+                  "label": "Leetcode #104",
+                  "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t070",
+              "type": "tech",
+              "title": "LLM concepts \u2014 tokens, context window, temperature",
+              "ref": "AI Concepts Week 5",
               "description": "Understand how LLMs work at a practical level. Tokens, embeddings, temperature, top-p. You'll be asked this in interviews.",
               "status": "pending",
               "priority": "high",
               "estimatedMin": 45,
               "resources": [
-                { "label": "Anthropic docs — intro to Claude", "url": "https://docs.anthropic.com/en/docs/intro-to-claude" },
-                { "label": "OpenAI tokenizer tool", "url": "https://platform.openai.com/tokenizer" },
-                { "label": "3Blue1Brown — transformers", "url": "https://www.youtube.com/watch?v=wjZofJX0v4M" }
+                {
+                  "label": "Anthropic docs \u2014 intro to Claude",
+                  "url": "https://docs.anthropic.com/en/docs/intro-to-claude"
+                },
+                {
+                  "label": "3Blue1Brown \u2014 transformers",
+                  "url": "https://www.youtube.com/watch?v=wjZofJX0v4M"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w5d3",
+          "weekId": "w5",
+          "date": "2026-05-06",
+          "dayLabel": "Wednesday",
+          "tasks": [
+            {
+              "id": "t071",
+              "type": "dsa",
+              "title": "Same Tree",
+              "ref": "Leetcode #100",
+              "description": "Recursive comparison. Handle null cases first. Simple but great for practicing tree recursion.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 30,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=vRbbcKXCxOw"
+                },
+                {
+                  "label": "Leetcode #100",
+                  "url": "https://leetcode.com/problems/same-tree/"
+                }
               ],
               "notes": ""
             },
             {
-              "id": "t023",
+              "id": "t072",
               "type": "tech",
-              "title": "LangChain.js — chains and prompt templates",
+              "title": "LangChain.js \u2014 chains and prompt templates",
               "ref": "AI Engineering Week 5",
               "description": "Build a basic chain. Understand PromptTemplate, LLMChain, output parsers. Connect to OpenAI or Anthropic.",
               "status": "pending",
               "priority": "high",
               "estimatedMin": 90,
               "resources": [
-                { "label": "LangChain JS quickstart", "url": "https://js.langchain.com/docs/tutorials/llm_chain" },
-                { "label": "LangChain JS docs", "url": "https://js.langchain.com/docs/introduction/" }
+                {
+                  "label": "LangChain JS quickstart",
+                  "url": "https://js.langchain.com/docs/tutorials/llm_chain"
+                },
+                {
+                  "label": "LangChain JS docs",
+                  "url": "https://js.langchain.com/docs/introduction/"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w5d4",
+          "weekId": "w5",
+          "date": "2026-05-07",
+          "dayLabel": "Thursday",
+          "tasks": [
+            {
+              "id": "t073",
+              "type": "dsa",
+              "title": "Subtree of Another Tree",
+              "ref": "Leetcode #572",
+              "description": "Use sameTree helper. Call it at every node. Understand O(n*m) complexity.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 40,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=E36O5SWp-LE"
+                },
+                {
+                  "label": "Leetcode #572",
+                  "url": "https://leetcode.com/problems/subtree-of-another-tree/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t074",
+              "type": "tech",
+              "title": "OpenAI function calling / tool use",
+              "ref": "AI Engineering Week 5",
+              "description": "Implement function calling. Pass tools to the model. Parse structured JSON responses. Build a real use case.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "OpenAI function calling docs",
+                  "url": "https://platform.openai.com/docs/guides/function-calling"
+                },
+                {
+                  "label": "Fireship AI functions",
+                  "url": "https://www.youtube.com/watch?v=pRdJdGPqoJw"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w6",
+      "week": 6,
+      "month": 2,
+      "theme": "AI RAG & Embeddings + Trees",
+      "days": [
+        {
+          "id": "w6d1",
+          "weekId": "w6",
+          "date": "2026-05-11",
+          "dayLabel": "Monday",
+          "tasks": [
+            {
+              "id": "t075",
+              "type": "dsa",
+              "title": "Lowest Common Ancestor of BST",
+              "ref": "Leetcode #235",
+              "description": "Use BST property: go left if both < root, right if both > root, else found LCA.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 40,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=gs2LMfuOR9k"
+                },
+                {
+                  "label": "Leetcode #235",
+                  "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t076",
+              "type": "tech",
+              "title": "Build a RAG pipeline from scratch",
+              "ref": "AI Engineering Week 6",
+              "description": "Chunk documents. Generate embeddings with OpenAI. Store in Pinecone/Supabase. Retrieve & inject into prompt.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 120,
+              "resources": [
+                {
+                  "label": "Pinecone RAG tutorial",
+                  "url": "https://www.pinecone.io/learn/retrieval-augmented-generation/"
+                },
+                {
+                  "label": "LangChain RAG guide",
+                  "url": "https://js.langchain.com/docs/tutorials/rag"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w6d2",
+          "weekId": "w6",
+          "date": "2026-05-12",
+          "dayLabel": "Tuesday",
+          "tasks": [
+            {
+              "id": "t077",
+              "type": "dsa",
+              "title": "Kth Smallest Element in BST",
+              "ref": "Leetcode #230",
+              "description": "In-order traversal gives sorted order in BST. Stop at kth element. Iterative stack approach.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 45,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=5LUXSvjmGCw"
+                },
+                {
+                  "label": "Leetcode #230",
+                  "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t078",
+              "type": "tech",
+              "title": "Vector embeddings \u2014 understand & visualise",
+              "ref": "AI Concepts Week 6",
+              "description": "Generate embeddings. Compute cosine similarity. Use UMAP to visualise. Understand semantic search fundamentally.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 60,
+              "resources": [
+                {
+                  "label": "OpenAI embeddings docs",
+                  "url": "https://platform.openai.com/docs/guides/embeddings"
+                },
+                {
+                  "label": "Andrej Karpathy on embeddings",
+                  "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w6d3",
+          "weekId": "w6",
+          "date": "2026-05-13",
+          "dayLabel": "Wednesday",
+          "tasks": [
+            {
+              "id": "t079",
+              "type": "dsa",
+              "title": "Binary Tree Level Order Traversal",
+              "ref": "Leetcode #102",
+              "description": "BFS with a queue. Track level boundaries with inner loop on queue size. Very common.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 45,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=6ZnyEApgFYg"
+                },
+                {
+                  "label": "Leetcode #102",
+                  "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t080",
+              "type": "tech",
+              "title": "Supabase pgvector \u2014 vector DB in Postgres",
+              "ref": "AI Engineering Week 6",
+              "description": "Enable pgvector extension. Store embeddings in Postgres. Run similarity search with cosine distance.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "Supabase vector docs",
+                  "url": "https://supabase.com/docs/guides/ai/vector-columns"
+                },
+                {
+                  "label": "Supabase RAG tutorial",
+                  "url": "https://supabase.com/blog/building-rag-based-chatbot"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w6d4",
+          "weekId": "w6",
+          "date": "2026-05-14",
+          "dayLabel": "Thursday",
+          "tasks": [
+            {
+              "id": "t081",
+              "type": "dsa",
+              "title": "Construct Binary Tree from Preorder and Inorder",
+              "ref": "Leetcode #105",
+              "description": "Hard but important. Root is preorder[0]. Find in inorder to split left/right subtree.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 60,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=ihj4IQGZ2zc"
+                },
+                {
+                  "label": "Leetcode #105",
+                  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t082",
+              "type": "tech",
+              "title": "Deploy AI app to Vercel + env secrets",
+              "ref": "AI Engineering Week 6",
+              "description": "Deploy RAG chat app to Vercel. Configure environment variables securely. Set up edge runtime if needed.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 60,
+              "resources": [
+                {
+                  "label": "Vercel deployment docs",
+                  "url": "https://vercel.com/docs/deployments/overview"
+                },
+                {
+                  "label": "Vercel env vars guide",
+                  "url": "https://vercel.com/docs/environment-variables"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w7",
+      "week": 7,
+      "month": 2,
+      "theme": "Kubernetes Basics + Graph Traversal",
+      "days": [
+        {
+          "id": "w7d1",
+          "weekId": "w7",
+          "date": "2026-05-18",
+          "dayLabel": "Monday",
+          "tasks": [
+            {
+              "id": "t083",
+              "type": "dsa",
+              "title": "Number of Islands",
+              "ref": "Leetcode #200",
+              "description": "DFS/BFS on a grid. Mark visited cells. Count connected components. Classic graph problem.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 50,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=pV2kpPD66nE"
+                },
+                {
+                  "label": "Leetcode #200",
+                  "url": "https://leetcode.com/problems/number-of-islands/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t084",
+              "type": "tech",
+              "title": "Kubernetes concepts \u2014 pods, nodes, clusters",
+              "ref": "K8s Week 7",
+              "description": "Understand K8s architecture. Pods, Deployments, Services, Namespaces. Install minikube locally.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "Kubernetes official docs",
+                  "url": "https://kubernetes.io/docs/concepts/"
+                },
+                {
+                  "label": "TechWorld Nana K8s full course",
+                  "url": "https://www.youtube.com/watch?v=X48VuDVv0do"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w7d2",
+          "weekId": "w7",
+          "date": "2026-05-19",
+          "dayLabel": "Tuesday",
+          "tasks": [
+            {
+              "id": "t085",
+              "type": "dsa",
+              "title": "Clone Graph",
+              "ref": "Leetcode #133",
+              "description": "BFS/DFS + hash map to avoid cycles. The visited map maps old node \u2192 new node.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 50,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=mQeF6bN8hMk"
+                },
+                {
+                  "label": "Leetcode #133",
+                  "url": "https://leetcode.com/problems/clone-graph/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t086",
+              "type": "tech",
+              "title": "Write Kubernetes YAML \u2014 Deployment + Service",
+              "ref": "K8s Week 7",
+              "description": "Write Deployment YAML for your Node app. Expose via ClusterIP Service. Apply with kubectl.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "K8s Deployment docs",
+                  "url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/"
+                },
+                {
+                  "label": "K8s YAML tutorial",
+                  "url": "https://www.youtube.com/watch?v=qmDzcu5uY1I"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w7d3",
+          "weekId": "w7",
+          "date": "2026-05-20",
+          "dayLabel": "Wednesday",
+          "tasks": [
+            {
+              "id": "t087",
+              "type": "dsa",
+              "title": "Pacific Atlantic Water Flow",
+              "ref": "Leetcode #417",
+              "description": "Multi-source BFS/DFS from edges. Run twice (Pacific, Atlantic). Intersect results.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 60,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=s-VIfLM6IHc"
+                },
+                {
+                  "label": "Leetcode #417",
+                  "url": "https://leetcode.com/problems/pacific-atlantic-water-flow/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t088",
+              "type": "tech",
+              "title": "Kubernetes \u2014 ConfigMaps & Secrets",
+              "ref": "K8s Week 7",
+              "description": "Store app config in ConfigMap. Store DB passwords in Secrets. Mount both as env vars in pods.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 75,
+              "resources": [
+                {
+                  "label": "K8s ConfigMaps docs",
+                  "url": "https://kubernetes.io/docs/concepts/configuration/configmap/"
+                },
+                {
+                  "label": "K8s Secrets docs",
+                  "url": "https://kubernetes.io/docs/concepts/configuration/secret/"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w7d4",
+          "weekId": "w7",
+          "date": "2026-05-21",
+          "dayLabel": "Thursday",
+          "tasks": [
+            {
+              "id": "t089",
+              "type": "dsa",
+              "title": "Course Schedule",
+              "ref": "Leetcode #207",
+              "description": "Topological sort / cycle detection in directed graph. BFS (Kahn's algo) or DFS with states.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 60,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=EgI5nU9etnU"
+                },
+                {
+                  "label": "Leetcode #207",
+                  "url": "https://leetcode.com/problems/course-schedule/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t090",
+              "type": "tech",
+              "title": "Kubernetes \u2014 Ingress + Horizontal Pod Autoscaler",
+              "ref": "K8s Week 7",
+              "description": "Set up Nginx Ingress controller. Route traffic. Configure HPA to scale pods on CPU usage.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "K8s Ingress docs",
+                  "url": "https://kubernetes.io/docs/concepts/services-networking/ingress/"
+                },
+                {
+                  "label": "K8s HPA docs",
+                  "url": "https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w8",
+      "week": 8,
+      "month": 2,
+      "theme": "System Design Basics + Heap & Priority Queue",
+      "days": [
+        {
+          "id": "w8d1",
+          "weekId": "w8",
+          "date": "2026-05-25",
+          "dayLabel": "Monday",
+          "tasks": [
+            {
+              "id": "t091",
+              "type": "dsa",
+              "title": "Kth Largest Element in an Array",
+              "ref": "Leetcode #215",
+              "description": "Min-heap of size k. QuickSelect O(n) average. Know both approaches for interviews.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 50,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=XEmy13g1Qxc"
+                },
+                {
+                  "label": "Leetcode #215",
+                  "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t092",
+              "type": "tech",
+              "title": "System design \u2014 URL shortener",
+              "ref": "System Design Week 8",
+              "description": "Design bit.ly from scratch. Hash function, redirect, DB schema, caching layer, scale to millions.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "System Design Primer",
+                  "url": "https://github.com/donnemartin/system-design-primer"
+                },
+                {
+                  "label": "ByteByteGo URL shortener",
+                  "url": "https://www.youtube.com/watch?v=fMZMm_0ZhK4"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w8d2",
+          "weekId": "w8",
+          "date": "2026-05-26",
+          "dayLabel": "Tuesday",
+          "tasks": [
+            {
+              "id": "t093",
+              "type": "dsa",
+              "title": "Find Median from Data Stream",
+              "ref": "Leetcode #295",
+              "description": "Two heaps: max-heap (left half) + min-heap (right half). Balance after each insert.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 60,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=itmhHWaHupI"
+                },
+                {
+                  "label": "Leetcode #295",
+                  "url": "https://leetcode.com/problems/find-median-from-data-stream/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t094",
+              "type": "tech",
+              "title": "System design \u2014 design Twitter feed",
+              "ref": "System Design Week 8",
+              "description": "Fan-out vs pull model. Newsfeed generation. CDN for media. Redis for timeline cache.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "ByteByteGo Twitter design",
+                  "url": "https://www.youtube.com/watch?v=wYk0xPP_P_8"
+                },
+                {
+                  "label": "Gaurav Sen Twitter",
+                  "url": "https://www.youtube.com/watch?v=KmAyPMe19g0"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w8d3",
+          "weekId": "w8",
+          "date": "2026-05-27",
+          "dayLabel": "Wednesday",
+          "tasks": [
+            {
+              "id": "t095",
+              "type": "dsa",
+              "title": "Task Scheduler",
+              "ref": "Leetcode #621",
+              "description": "Max-heap + cooldown. Greedy: always pick most frequent available task. Calculate idle time.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 60,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=s8p8ukTyA2I"
+                },
+                {
+                  "label": "Leetcode #621",
+                  "url": "https://leetcode.com/problems/task-scheduler/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t096",
+              "type": "tech",
+              "title": "CAP theorem + consistency patterns",
+              "ref": "System Design Week 8",
+              "description": "Understand CAP theorem. Strong vs eventual consistency. ACID vs BASE. Where MongoDB/Postgres fit.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 60,
+              "resources": [
+                {
+                  "label": "ByteByteGo CAP theorem",
+                  "url": "https://www.youtube.com/watch?v=BHqjEjzAicA"
+                },
+                {
+                  "label": "Martin Kleppmann on consistency",
+                  "url": "https://www.youtube.com/watch?v=noUNH3jDLC0"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w8d4",
+          "weekId": "w8",
+          "date": "2026-05-28",
+          "dayLabel": "Thursday",
+          "tasks": [
+            {
+              "id": "t097",
+              "type": "dsa",
+              "title": "Design Twitter (simplified)",
+              "ref": "Leetcode #355",
+              "description": "OOP + heap. postTweet, getNewsFeed, follow/unfollow. Min-heap merges k sorted feeds.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 75,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=pNichitDD2E"
+                },
+                {
+                  "label": "Leetcode #355",
+                  "url": "https://leetcode.com/problems/design-twitter/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t098",
+              "type": "tech",
+              "title": "Load balancing + rate limiting deep dive",
+              "ref": "System Design Week 8",
+              "description": "Round robin vs least connections. Token bucket vs leaky bucket rate limiting. Implement basic rate limiter in Express.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 75,
+              "resources": [
+                {
+                  "label": "ByteByteGo load balancing",
+                  "url": "https://www.youtube.com/watch?v=iqOTT7_7qXY"
+                },
+                {
+                  "label": "Rate limiting guide",
+                  "url": "https://www.youtube.com/watch?v=FU4WlwfS3G0"
+                }
               ],
               "notes": ""
             }
@@ -337,7 +1665,7 @@
       "id": "w9",
       "week": 9,
       "month": 3,
-      "theme": "PostgreSQL deep dive + Basic DP",
+      "theme": "PostgreSQL Deep Dive + Basic DP",
       "days": [
         {
           "id": "w9d1",
@@ -346,32 +1674,810 @@
           "dayLabel": "Monday",
           "tasks": [
             {
-              "id": "t030",
+              "id": "t099",
               "type": "dsa",
               "title": "Climbing Stairs",
-              "ref": "Leetcode #70 / NeetCode #64",
+              "ref": "Leetcode #70",
               "description": "Your first DP problem. See the Fibonacci pattern. Solve with recursion first, then memoization, then bottom-up.",
               "status": "pending",
               "priority": "high",
               "estimatedMin": 45,
               "resources": [
-                { "label": "NeetCode video", "url": "https://www.youtube.com/watch?v=Y0lT9Fck7qI" },
-                { "label": "Leetcode #70", "url": "https://leetcode.com/problems/climbing-stairs/" }
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=Y0lT9Fck7qI"
+                },
+                {
+                  "label": "Leetcode #70",
+                  "url": "https://leetcode.com/problems/climbing-stairs/"
+                }
               ],
               "notes": ""
             },
             {
-              "id": "t031",
+              "id": "t100",
               "type": "tech",
-              "title": "PostgreSQL indexing — understand EXPLAIN ANALYZE",
+              "title": "PostgreSQL indexing \u2014 understand EXPLAIN ANALYZE",
               "ref": "PostgreSQL Week 9",
               "description": "Run EXPLAIN ANALYZE on slow queries. Create indexes. See the difference. Understand B-tree vs Hash index.",
               "status": "pending",
               "priority": "high",
               "estimatedMin": 90,
               "resources": [
-                { "label": "PostgreSQL tutorial — indexes", "url": "https://www.postgresqltutorial.com/postgresql-indexes/" },
-                { "label": "Hussein Nasser Postgres", "url": "https://www.youtube.com/watch?v=oebtXK16WuU" }
+                {
+                  "label": "PostgreSQL tutorial \u2014 indexes",
+                  "url": "https://www.postgresqltutorial.com/postgresql-indexes/"
+                },
+                {
+                  "label": "Hussein Nasser Postgres",
+                  "url": "https://www.youtube.com/watch?v=oebtXK16WuU"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w9d2",
+          "weekId": "w9",
+          "date": "2026-06-02",
+          "dayLabel": "Tuesday",
+          "tasks": [
+            {
+              "id": "t101",
+              "type": "dsa",
+              "title": "House Robber",
+              "ref": "Leetcode #198",
+              "description": "DP. rob[i] = max(rob[i-2] + nums[i], rob[i-1]). Can reduce to 2 variables.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 45,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=73r3KWiEvyk"
+                },
+                {
+                  "label": "Leetcode #198",
+                  "url": "https://leetcode.com/problems/house-robber/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t102",
+              "type": "tech",
+              "title": "PostgreSQL \u2014 window functions & CTEs",
+              "ref": "PostgreSQL Week 9",
+              "description": "RANK, ROW_NUMBER, LAG, LEAD. Write complex analytics queries using CTEs. Real use cases.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 75,
+              "resources": [
+                {
+                  "label": "Postgres window functions",
+                  "url": "https://www.postgresql.org/docs/current/tutorial-window.html"
+                },
+                {
+                  "label": "PostgreSQL tutorial CTEs",
+                  "url": "https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-cte/"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w9d3",
+          "weekId": "w9",
+          "date": "2026-06-03",
+          "dayLabel": "Wednesday",
+          "tasks": [
+            {
+              "id": "t103",
+              "type": "dsa",
+              "title": "Coin Change",
+              "ref": "Leetcode #322",
+              "description": "Bottom-up DP. dp[i] = min coins to make amount i. Classic unbounded knapsack variant.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 50,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=H9bfqozjoqs"
+                },
+                {
+                  "label": "Leetcode #322",
+                  "url": "https://leetcode.com/problems/coin-change/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t104",
+              "type": "tech",
+              "title": "PostgreSQL \u2014 full text search + GIN indexes",
+              "ref": "PostgreSQL Week 9",
+              "description": "tsvector, tsquery, to_tsvector. Create GIN index for fast full text search. Real search endpoint.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "Postgres FTS docs",
+                  "url": "https://www.postgresql.org/docs/current/textsearch.html"
+                },
+                {
+                  "label": "FTS tutorial",
+                  "url": "https://www.youtube.com/watch?v=szfUbzsKvtE"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w9d4",
+          "weekId": "w9",
+          "date": "2026-06-04",
+          "dayLabel": "Thursday",
+          "tasks": [
+            {
+              "id": "t105",
+              "type": "dsa",
+              "title": "Longest Common Subsequence",
+              "ref": "Leetcode #1143",
+              "description": "2D DP grid. if chars match: dp[i][j] = dp[i-1][j-1]+1 else max of adjacent. Build table.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 60,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=Ua0GhsJSlWM"
+                },
+                {
+                  "label": "Leetcode #1143",
+                  "url": "https://leetcode.com/problems/longest-common-subsequence/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t106",
+              "type": "tech",
+              "title": "PostgreSQL \u2014 partitioning + vacuuming",
+              "ref": "PostgreSQL Week 9",
+              "description": "Partition large tables by date range. Understand autovacuum. Run VACUUM ANALYZE. Monitor bloat.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 75,
+              "resources": [
+                {
+                  "label": "Postgres partitioning docs",
+                  "url": "https://www.postgresql.org/docs/current/ddl-partitioning.html"
+                },
+                {
+                  "label": "PostgreSQL vacuum guide",
+                  "url": "https://www.postgresqltutorial.com/postgresql-administration/postgresql-vacuum/"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w10",
+      "week": 10,
+      "month": 3,
+      "theme": "Redis & Caching + Intermediate DP",
+      "days": [
+        {
+          "id": "w10d1",
+          "weekId": "w10",
+          "date": "2026-06-08",
+          "dayLabel": "Monday",
+          "tasks": [
+            {
+              "id": "t107",
+              "type": "dsa",
+              "title": "Word Break",
+              "ref": "Leetcode #139",
+              "description": "DP. dp[i] = true if s[0:i] can be segmented. Iterate from j=0 to i, check dp[j] + s[j:i] in wordDict.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 55,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=Sx9NNgInc3A"
+                },
+                {
+                  "label": "Leetcode #139",
+                  "url": "https://leetcode.com/problems/word-break/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t108",
+              "type": "tech",
+              "title": "Redis fundamentals \u2014 data structures & use cases",
+              "ref": "Redis Week 10",
+              "description": "String, Hash, List, Set, Sorted Set. When to use each. Run Redis in Docker. Use redis-cli.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 75,
+              "resources": [
+                {
+                  "label": "Redis official docs",
+                  "url": "https://redis.io/docs/latest/"
+                },
+                {
+                  "label": "Fireship Redis tutorial",
+                  "url": "https://www.youtube.com/watch?v=G1rOthIU-uo"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w10d2",
+          "weekId": "w10",
+          "date": "2026-06-09",
+          "dayLabel": "Tuesday",
+          "tasks": [
+            {
+              "id": "t109",
+              "type": "dsa",
+              "title": "Unique Paths",
+              "ref": "Leetcode #62",
+              "description": "2D DP or combinatorics. dp[i][j] = dp[i-1][j] + dp[i][j-1]. Base case: top row & left col = 1.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 40,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=IlEsdxuD4lY"
+                },
+                {
+                  "label": "Leetcode #62",
+                  "url": "https://leetcode.com/problems/unique-paths/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t110",
+              "type": "tech",
+              "title": "Redis caching layer for Express API",
+              "ref": "Redis Week 10",
+              "description": "Add Redis caching to your Express API. Cache GET responses. Invalidate on mutations. ioredis library.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "ioredis docs",
+                  "url": "https://github.com/redis/ioredis"
+                },
+                {
+                  "label": "Redis caching pattern",
+                  "url": "https://www.youtube.com/watch?v=U3RkDLtS7uY"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w10d3",
+          "weekId": "w10",
+          "date": "2026-06-10",
+          "dayLabel": "Wednesday",
+          "tasks": [
+            {
+              "id": "t111",
+              "type": "dsa",
+              "title": "Decode Ways",
+              "ref": "Leetcode #91",
+              "description": "DP. dp[i] depends on dp[i-1] (1-digit) and dp[i-2] (2-digit). Handle '0' edge cases carefully.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 55,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=6aEyTjOwlJU"
+                },
+                {
+                  "label": "Leetcode #91",
+                  "url": "https://leetcode.com/problems/decode-ways/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t112",
+              "type": "tech",
+              "title": "Redis pub/sub \u2014 real-time notifications",
+              "ref": "Redis Week 10",
+              "description": "Implement pub/sub with Redis. Publisher service, subscriber service. Build a real-time notification system.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "Redis pub/sub docs",
+                  "url": "https://redis.io/docs/latest/develop/interact/pubsub/"
+                },
+                {
+                  "label": "Redis pub/sub tutorial",
+                  "url": "https://www.youtube.com/watch?v=jgpVdJB2sKQ"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w10d4",
+          "weekId": "w10",
+          "date": "2026-06-11",
+          "dayLabel": "Thursday",
+          "tasks": [
+            {
+              "id": "t113",
+              "type": "dsa",
+              "title": "Maximum Product Subarray",
+              "ref": "Leetcode #152",
+              "description": "Track both max and min at each step (negatives can flip sign). DP with two variables.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 50,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=lXVy6YWFcRM"
+                },
+                {
+                  "label": "Leetcode #152",
+                  "url": "https://leetcode.com/problems/maximum-product-subarray/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t114",
+              "type": "tech",
+              "title": "Redis \u2014 session management + rate limiting",
+              "ref": "Redis Week 10",
+              "description": "Replace JWT in-memory store with Redis. Implement sliding window rate limiting using Redis sorted sets.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 75,
+              "resources": [
+                {
+                  "label": "Redis rate limiting pattern",
+                  "url": "https://redis.io/glossary/rate-limiting/"
+                },
+                {
+                  "label": "Session management Redis",
+                  "url": "https://www.youtube.com/watch?v=oPAcQn8bj7I"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w11",
+      "week": 11,
+      "month": 3,
+      "theme": "Microservices + Backtracking",
+      "days": [
+        {
+          "id": "w11d1",
+          "weekId": "w11",
+          "date": "2026-06-15",
+          "dayLabel": "Monday",
+          "tasks": [
+            {
+              "id": "t115",
+              "type": "dsa",
+              "title": "Subsets",
+              "ref": "Leetcode #78",
+              "description": "Backtracking. At each step: include or exclude. Draw decision tree. O(2^n) solutions.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 45,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=REOH22Xwdkk"
+                },
+                {
+                  "label": "Leetcode #78",
+                  "url": "https://leetcode.com/problems/subsets/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t116",
+              "type": "tech",
+              "title": "Microservices \u2014 split monolith into services",
+              "ref": "Microservices Week 11",
+              "description": "Take your existing app. Extract auth service, user service, product service. Define boundaries clearly.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "Microservices patterns",
+                  "url": "https://microservices.io/patterns/microservices.html"
+                },
+                {
+                  "label": "Sam Newman microservices talk",
+                  "url": "https://www.youtube.com/watch?v=PFQnNFe27kU"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w11d2",
+          "weekId": "w11",
+          "date": "2026-06-16",
+          "dayLabel": "Tuesday",
+          "tasks": [
+            {
+              "id": "t117",
+              "type": "dsa",
+              "title": "Combination Sum",
+              "ref": "Leetcode #39",
+              "description": "Backtracking. Reuse elements allowed. Prune by checking remaining < 0. Avoid duplicates by index.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 50,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=GBKI9VSKdGg"
+                },
+                {
+                  "label": "Leetcode #39",
+                  "url": "https://leetcode.com/problems/combination-sum/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t118",
+              "type": "tech",
+              "title": "gRPC \u2014 service-to-service communication",
+              "ref": "Microservices Week 11",
+              "description": "Define .proto file. Generate TypeScript types. Build gRPC server + client. Replace REST between services.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "gRPC Node.js tutorial",
+                  "url": "https://grpc.io/docs/languages/node/basics/"
+                },
+                {
+                  "label": "Fireship gRPC tutorial",
+                  "url": "https://www.youtube.com/watch?v=Yw4rkaTc0f8"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w11d3",
+          "weekId": "w11",
+          "date": "2026-06-17",
+          "dayLabel": "Wednesday",
+          "tasks": [
+            {
+              "id": "t119",
+              "type": "dsa",
+              "title": "Permutations",
+              "ref": "Leetcode #46",
+              "description": "Backtracking. Swap elements in-place. Or use a used[] boolean array. Generate all n! permutations.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 50,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=s7AvT7cGdSo"
+                },
+                {
+                  "label": "Leetcode #46",
+                  "url": "https://leetcode.com/problems/permutations/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t120",
+              "type": "tech",
+              "title": "Message queues \u2014 RabbitMQ or Bull/BullMQ",
+              "ref": "Microservices Week 11",
+              "description": "Add async job queue to your microservices. Process emails, notifications, reports asynchronously.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "BullMQ docs",
+                  "url": "https://docs.bullmq.io/"
+                },
+                {
+                  "label": "RabbitMQ tutorial",
+                  "url": "https://www.rabbitmq.com/tutorials/tutorial-one-javascript"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w11d4",
+          "weekId": "w11",
+          "date": "2026-06-18",
+          "dayLabel": "Thursday",
+          "tasks": [
+            {
+              "id": "t121",
+              "type": "dsa",
+              "title": "N-Queens",
+              "ref": "Leetcode #51",
+              "description": "Classic backtracking. Track attacked rows/cols/diagonals with sets. Place queen, recurse, remove.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 75,
+              "resources": [
+                {
+                  "label": "NeetCode video",
+                  "url": "https://www.youtube.com/watch?v=Ph95IHmRp5M"
+                },
+                {
+                  "label": "Leetcode #51",
+                  "url": "https://leetcode.com/problems/n-queens/"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t122",
+              "type": "tech",
+              "title": "Distributed tracing \u2014 OpenTelemetry",
+              "ref": "Microservices Week 11",
+              "description": "Add OpenTelemetry to each service. Export traces to Jaeger. Trace a request across 3 services end-to-end.",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "OpenTelemetry Node.js",
+                  "url": "https://opentelemetry.io/docs/languages/js/getting-started/nodejs/"
+                },
+                {
+                  "label": "Jaeger tracing tutorial",
+                  "url": "https://www.youtube.com/watch?v=UrZRFlz_X6o"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w12",
+      "week": 12,
+      "month": 3,
+      "theme": "Full System Design + Mock Interviews",
+      "days": [
+        {
+          "id": "w12d1",
+          "weekId": "w12",
+          "date": "2026-06-22",
+          "dayLabel": "Monday",
+          "tasks": [
+            {
+              "id": "t123",
+              "type": "dsa",
+              "title": "Mock Interview #1 \u2014 Easy+Medium set",
+              "ref": "Mock Week 12",
+              "description": "Timed session: 2 easy + 1 medium in 60 min. No hints. Write clean code with comments. Review after.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 75,
+              "resources": [
+                {
+                  "label": "LeetCode mock interview",
+                  "url": "https://leetcode.com/assessment/"
+                },
+                {
+                  "label": "Pramp mock interviews",
+                  "url": "https://www.pramp.com"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t124",
+              "type": "tech",
+              "title": "System design \u2014 design WhatsApp / real-time chat",
+              "ref": "System Design Week 12",
+              "description": "WebSockets vs long polling. Message delivery guarantees. Online presence. Media storage. Scale to 1B users.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "ByteByteGo WhatsApp design",
+                  "url": "https://www.youtube.com/watch?v=vvhC64hQZMk"
+                },
+                {
+                  "label": "System design primer",
+                  "url": "https://github.com/donnemartin/system-design-primer"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w12d2",
+          "weekId": "w12",
+          "date": "2026-06-23",
+          "dayLabel": "Tuesday",
+          "tasks": [
+            {
+              "id": "t125",
+              "type": "dsa",
+              "title": "Mock Interview #2 \u2014 Medium set",
+              "ref": "Mock Week 12",
+              "description": "2 medium problems in 60 min. Explain approach before coding. Think out loud. Simulate real interview.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 75,
+              "resources": [
+                {
+                  "label": "NeetCode 150 list",
+                  "url": "https://neetcode.io/practice"
+                },
+                {
+                  "label": "Pramp mock interviews",
+                  "url": "https://www.pramp.com"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t126",
+              "type": "tech",
+              "title": "System design \u2014 design Netflix / video streaming",
+              "ref": "System Design Week 12",
+              "description": "CDN for video delivery. Adaptive bitrate streaming. Content ingestion pipeline. Recommendation engine.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "ByteByteGo Netflix design",
+                  "url": "https://www.youtube.com/watch?v=psQzyFfsUGU"
+                },
+                {
+                  "label": "Gaurav Sen Netflix",
+                  "url": "https://www.youtube.com/watch?v=lYoSd2WCJTo"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w12d3",
+          "weekId": "w12",
+          "date": "2026-06-24",
+          "dayLabel": "Wednesday",
+          "tasks": [
+            {
+              "id": "t127",
+              "type": "dsa",
+              "title": "Mock Interview #3 \u2014 Mixed difficulty",
+              "ref": "Mock Week 12",
+              "description": "1 easy + 2 medium OR 1 hard in 75 min. Pick problems you haven't seen. Realistic pressure.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "LeetCode contests archive",
+                  "url": "https://leetcode.com/contest/"
+                },
+                {
+                  "label": "Codeforces practice",
+                  "url": "https://codeforces.com"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t128",
+              "type": "tech",
+              "title": "Portfolio & GitHub polish sprint",
+              "ref": "Career Week 12",
+              "description": "Update GitHub READMEs with architecture diagrams. Pin 3 best repos. Add live demo links. Update LinkedIn with skills.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "GitHub README tips",
+                  "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes"
+                },
+                {
+                  "label": "Dev portfolio guide",
+                  "url": "https://www.youtube.com/watch?v=G-Cr00UYokU"
+                }
+              ],
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "w12d4",
+          "weekId": "w12",
+          "date": "2026-06-25",
+          "dayLabel": "Thursday",
+          "tasks": [
+            {
+              "id": "t129",
+              "type": "dsa",
+              "title": "Final review \u2014 weak spots",
+              "ref": "Review Week 12",
+              "description": "Revisit any problems you got wrong. Re-solve without looking. Write time/space complexity for each.",
+              "status": "pending",
+              "priority": "high",
+              "estimatedMin": 90,
+              "resources": [
+                {
+                  "label": "NeetCode 150 progress",
+                  "url": "https://neetcode.io/practice"
+                }
+              ],
+              "notes": ""
+            },
+            {
+              "id": "t130",
+              "type": "tech",
+              "title": "3-month retrospective + Month 4 planning",
+              "ref": "Career Week 12",
+              "description": "Review what you built. Write a LinkedIn post about your 3-month journey. Plan next 3 months: what's missing?",
+              "status": "pending",
+              "priority": "medium",
+              "estimatedMin": 60,
+              "resources": [
+                {
+                  "label": "IndieHackers retrospective template",
+                  "url": "https://www.indiehackers.com"
+                }
               ],
               "notes": ""
             }
@@ -381,10 +2487,25 @@
     }
   ],
   "taskTypes": {
-    "dsa": { "label": "DSA", "color": "green" },
-    "tech": { "label": "Tech / Build", "color": "blue" },
-    "concept": { "label": "Concept", "color": "purple" },
-    "revision": { "label": "Revision", "color": "gray" },
-    "profile": { "label": "Profile", "color": "amber" }
+    "dsa": {
+      "label": "DSA",
+      "color": "green"
+    },
+    "tech": {
+      "label": "Tech / Build",
+      "color": "blue"
+    },
+    "concept": {
+      "label": "Concept",
+      "color": "purple"
+    },
+    "revision": {
+      "label": "Revision",
+      "color": "gray"
+    },
+    "profile": {
+      "label": "Profile",
+      "color": "amber"
+    }
   }
 }

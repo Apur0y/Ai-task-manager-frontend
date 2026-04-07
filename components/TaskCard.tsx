@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import type { Task } from "@/lib/types";
+import type { Task } from "@/lib/taskService";
 import { TYPE_META, STATUS_META } from "@/lib/utils";
 
 interface Props {
@@ -11,17 +11,17 @@ interface Props {
 
 export default function TaskCard({ task, onStatusChange, showWeekContext }: Props) {
   const [open, setOpen] = useState(false);
-  const typeMeta = TYPE_META[task.type] || TYPE_META.tech;
+  const typeMeta = TYPE_META[task.category as keyof typeof TYPE_META] || TYPE_META.other;
   const statusMeta = STATUS_META[task.status];
 
-  const statusCycle: Task["status"][] = ["pending", "in-progress", "done", "skipped"];
+  const statusCycle: Task["status"][] = ["pending", "incomplete", "completed"];
   const nextStatus = statusCycle[(statusCycle.indexOf(task.status) + 1) % statusCycle.length];
 
   return (
     <div className={`rounded-xl border transition-all duration-200 animate-fadeup
-      ${task.status === "done"
+      ${task.status === "completed"
         ? "bg-ink-900/40 border-ink-700/30 opacity-70"
-        : task.status === "in-progress"
+        : task.status === "incomplete"
         ? "bg-ink-800/80 border-amber-400/20 glow-emerald"
         : "bg-ink-800/60 border-ink-700/50 hover:border-ink-600/70"
       }`}
@@ -35,7 +35,7 @@ export default function TaskCard({ task, onStatusChange, showWeekContext }: Prop
           className={`mt-0.5 text-lg leading-none flex-shrink-0 transition-all hover:scale-110 ${statusMeta.color}`}
           onClick={(e) => {
             e.stopPropagation();
-            onStatusChange?.(task.id, nextStatus);
+            onStatusChange?.(task._id, nextStatus);
           }}
           title={`Mark as ${nextStatus}`}
         >
@@ -47,7 +47,6 @@ export default function TaskCard({ task, onStatusChange, showWeekContext }: Prop
             <span className={`text-[10px] font-mono font-medium px-2 py-0.5 rounded border ${typeMeta.badge} ${typeMeta.text}`}>
               {typeMeta.label}
             </span>
-            <span className="text-[11px] text-ink-400 font-mono">{task.ref}</span>
             {task.priority === "high" && (
               <span className="text-[10px] text-rose-400 font-mono">↑ high</span>
             )}
