@@ -46,9 +46,13 @@ export default function TaskList({
       {tasks.map((task) => (
         <div
           key={task._id}
-          className="bg-slate-800 rounded-lg p-4 border border-slate-700 hover:border-slate-600 transition"
+          onClick={() =>
+            setExpandedId(expandedId === task._id ? null : task._id)
+          }
+          className="bg-slate-800 rounded-lg p-4 border border-slate-700 hover:border-slate-600 transition cursor-pointer"
         >
-          <div className="flex items-start justify-between gap-4">
+          {/* Top Section */}
+          <div className="flex items-start justify-between gap-4 mb-2">
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-3 mb-2">
                 {statusIcons[task.status]}
@@ -64,12 +68,14 @@ export default function TaskList({
                 </span>
               </div>
 
+              {/* Short Description */}
               {task.description && (
                 <p className="text-sm text-slate-400 mb-2 line-clamp-1">
                   {task.description}
                 </p>
               )}
 
+              {/* Meta */}
               <div className="flex flex-wrap gap-2 items-center text-xs text-slate-400">
                 {task.category && (
                   <span className="px-2 py-1 bg-slate-700 rounded">
@@ -84,10 +90,14 @@ export default function TaskList({
               </div>
             </div>
 
+            {/* Actions */}
             <div className="flex gap-2">
               {task.status !== "completed" && (
                 <button
-                  onClick={() => onTaskComplete?.(task._id)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onTaskComplete?.(task._id);
+                  }}
                   disabled={isLoading}
                   className="p-2 hover:bg-slate-700 rounded text-green-400 hover:text-green-300 disabled:opacity-50 transition"
                   title="Mark complete"
@@ -95,8 +105,12 @@ export default function TaskList({
                   <CheckCircle className="w-5 h-5" />
                 </button>
               )}
+
               <button
-                onClick={() => onTaskDelete?.(task._id)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onTaskDelete?.(task._id);
+                }}
                 disabled={isLoading}
                 className="p-2 hover:bg-slate-700 rounded text-red-400 hover:text-red-300 disabled:opacity-50 transition"
                 title="Delete task"
@@ -106,9 +120,36 @@ export default function TaskList({
             </div>
           </div>
 
-          {expandedId === task._id && task.description && (
-            <div className="mt-3 pt-3 border-t border-slate-700">
-              <p className="text-sm text-slate-300">{task.description}</p>
+          {/* Expanded Section */}
+          {expandedId === task._id && (
+            <div className="mt-3 pt-3 border-t border-slate-700 space-y-3">
+              {/* Full Description */}
+              {task.description && (
+                <p className="text-sm text-slate-300">
+                  {task.description}
+                </p>
+              )}
+
+              {/* Resources */}
+              {task.resources && task.resources.length > 0 && (
+                <div className="space-y-2">
+                  {task.resources.map((res, index) => (
+                    <div key={index} className="flex flex-col">
+                      <p className="text-sm text-slate-300">
+                        {res.label}
+                      </p>
+                      <a
+                        href={res.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-yellow-500 text-sm hover:underline break-all"
+                      >
+                        {res.url}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           )}
         </div>
