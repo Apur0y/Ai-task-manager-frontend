@@ -6,7 +6,7 @@ export interface Task {
   description?: string;
   category: string;
   date: string;
-  status: 'pending' | 'completed' | 'incomplete';
+  status: 'pending' | 'completed' | 'incomplete' | 'deleted';
   priority: 'low' | 'medium' | 'high';
   completedAt?: string;
   linkedFromDate?: string;

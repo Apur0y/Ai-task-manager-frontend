@@ -15,6 +15,8 @@ interface TaskStats {
 
 export default function AllTasksView() {
   const [tasks, setTasks] = useState<Task[]>([]);
+  const [selectedDate, setSelectedDate] = useState<string>(""); // ✅ filter state
+
   const [stats, setStats] = useState<TaskStats>({
     total: 0,
     completed: 0,
@@ -22,6 +24,7 @@ export default function AllTasksView() {
     incomplete: 0,
     completionRate: 0,
   });
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -33,42 +36,54 @@ export default function AllTasksView() {
     try {
       setLoading(true);
       setError(null);
+
       const data = await taskService.getAllTasks();
       const taskList = Array.isArray(data.tasks) ? data.tasks : [];
+
       setTasks(taskList);
 
-      // Use stats from response if available, otherwise calculate
-      if (data.totalTasks !== undefined && data.completedTasks !== undefined) {
-        setStats({
-          total: data.totalTasks || 0,
-          completed: data.completedTasks || 0,
-          pending: data.pendingTasks || 0,
-          incomplete: data.incompleteTasks || 0,
-          completionRate: data.totalTasks ? Math.round((data.completedTasks / data.totalTasks) * 100) : 0,
-        });
-      } else {
-        // Fallback: calculate from tasks
-        const completed = taskList.filter((t: Task) => t.status === "completed").length;
-        const pending = taskList.filter((t: Task) => t.status === "pending").length;
-        const incomplete = taskList.filter((t: Task) => t.status === "incomplete").length;
+      // Stats calculation
+      const completed = taskList.filter(
+        (t: Task) => t.status === "completed"
+      ).length;
+      const pending = taskList.filter(
+        (t: Task) => t.status === "pending"
+      ).length;
+      const incomplete = taskList.filter(
+        (t: Task) => t.status === "incomplete"
+      ).length;
 
-        setStats({
-          total: taskList.length,
-          completed,
-          pending,
-          incomplete,
-          completionRate: taskList.length > 0 ? Math.round((completed / taskList.length) * 100) : 0,
-        });
-      }
+      setStats({
+        total: taskList.length,
+        completed,
+        pending,
+        incomplete,
+        completionRate:
+          taskList.length > 0
+            ? Math.round((completed / taskList.length) * 100)
+            : 0,
+      });
     } catch (err) {
       setError(
         err instanceof Error ? err.message : "Failed to load tasks"
       );
-      console.error("Error loading today's tasks:", err);
     } finally {
       setLoading(false);
     }
   };
+
+  // ✅ Filter Logic
+  const filteredTasks = selectedDate
+    ? tasks.filter((task) => {
+        if (!task.date) return false;
+
+        const taskDate = new Date(task.date)
+          .toISOString()
+          .split("T")[0];
+
+        return taskDate === selectedDate;
+      })
+    : tasks;
 
   const handleCompleteTask = async (taskId: string) => {
     try {
@@ -82,7 +97,9 @@ export default function AllTasksView() {
   };
 
   const handleDeleteTask = async (taskId: string) => {
-    if (!confirm("Are you sure you want to delete this task?")) return;
+    if (!confirm("Are you sure you want to delete this task?"))
+      return;
+
     try {
       await taskService.deleteTask(taskId);
       await loadTodayTasks();
@@ -95,7 +112,7 @@ export default function AllTasksView() {
 
   return (
     <div className="w-full max-w-4xl mx-auto">
-      {/* Stats Cards */}
+      {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
         <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
           <div className="flex items-center gap-2 mb-2">
@@ -106,43 +123,62 @@ export default function AllTasksView() {
         </div>
 
         <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
-          <div className="flex items-center gap-2 mb-2">
-            <CheckCircle2 className="w-4 h-4 text-green-400" />
-            <span className="text-xs text-slate-400">Completed</span>
-          </div>
-          <p className="text-2xl font-bold text-green-400">{stats.completed}</p>
+          <CheckCircle2 className="w-4 h-4 text-green-400 mb-2" />
+          <p className="text-xs text-slate-400">Completed</p>
+          <p className="text-2xl font-bold text-green-400">
+            {stats.completed}
+          </p>
         </div>
 
         <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
-          <div className="flex items-center gap-2 mb-2">
-            <Clock className="w-4 h-4 text-yellow-400" />
-            <span className="text-xs text-slate-400">Pending</span>
-          </div>
+          <Clock className="w-4 h-4 text-yellow-400 mb-2" />
+          <p className="text-xs text-slate-400">Pending</p>
           <p className="text-2xl font-bold text-yellow-400">
             {stats.pending}
           </p>
         </div>
 
         <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
-          <div className="flex items-center gap-2 mb-2">
-            <AlertCircle className="w-4 h-4 text-orange-400" />
-            <span className="text-xs text-slate-400">Incomplete</span>
-          </div>
-          <p className="text-2xl font-bold text-orange-400">{stats.incomplete}</p>
+          <AlertCircle className="w-4 h-4 text-orange-400 mb-2" />
+          <p className="text-xs text-slate-400">Incomplete</p>
+          <p className="text-2xl font-bold text-orange-400">
+            {stats.incomplete}
+          </p>
         </div>
 
         <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
-          <div className="flex items-center gap-2 mb-2">
-            <Zap className="w-4 h-4 text-purple-400" />
-            <span className="text-xs text-slate-400">Progress</span>
-          </div>
+          <Zap className="w-4 h-4 text-purple-400 mb-2" />
+          <p className="text-xs text-slate-400">Progress</p>
           <p className="text-2xl font-bold text-purple-400">
             {stats.completionRate}%
           </p>
         </div>
       </div>
 
-      {/* Error Message */}
+      {/* Filter UI */}
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-lg font-semibold text-white">Tasks</h2>
+
+        <div className="flex items-center gap-2">
+          <input
+            type="date"
+            value={selectedDate}
+            onChange={(e) => setSelectedDate(e.target.value)}
+            className="px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          />
+
+          {selectedDate && (
+            <button
+              onClick={() => setSelectedDate("")}
+              className="text-xs px-3 py-2 bg-slate-700 hover:bg-slate-600 rounded text-white"
+            >
+              Clear
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* Error */}
       {error && (
         <div className="mb-4 p-4 bg-red-900/20 border border-red-700 rounded-lg text-red-200">
           {error}
@@ -151,21 +187,22 @@ export default function AllTasksView() {
 
       {/* Task List */}
       <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
-        <h2 className="text-lg font-semibold mb-4">Today's Tasks</h2>
         {loading ? (
           <div className="text-center py-8">
-            <div className="inline-block animate-spin">
-              <div className="w-8 h-8 border-4 border-slate-600 border-t-blue-400 rounded-full"></div>
-            </div>
+            <div className="w-8 h-8 border-4 border-slate-600 border-t-blue-400 rounded-full animate-spin mx-auto"></div>
             <p className="mt-3 text-slate-400">Loading tasks...</p>
           </div>
         ) : (
           <TaskList
-            tasks={tasks}
+            tasks={filteredTasks}
             onTaskComplete={handleCompleteTask}
             onTaskDelete={handleDeleteTask}
             isLoading={loading}
-            emptyMessage="No tasks for today. Great job! 🎉"
+            emptyMessage={
+              selectedDate
+                ? "No tasks for selected date 📅"
+                : "No tasks found 🎉"
+            }
           />
         )}
       </div>

@@ -42,7 +42,7 @@ export default function TaskList({
   }
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-3 overflow-auto">
       {tasks.map((task) => (
         <div
           key={task._id}

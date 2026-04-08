@@ -35,7 +35,10 @@ export default function TodayTasksView() {
       setError(null);
       const data = await taskService.getTodayTasks();
       const taskList = Array.isArray(data.tasks) ? data.tasks : [];
-      setTasks(taskList);
+      const filteredTaskList = taskList.filter(
+  (task: Task) => task.status !== "deleted"
+);
+      setTasks(filteredTaskList);
 
       // Use stats from response if available, otherwise calculate
       if (data.totalTasks !== undefined && data.completedTasks !== undefined) {
@@ -95,8 +98,30 @@ export default function TodayTasksView() {
 
   return (
     <div className="w-full max-w-4xl mx-auto">
-      {/* Stats Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
+  
+
+      {/* Task List */}
+      <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+        <h2 className="text-lg font-semibold mb-4">Today's Tasks</h2>
+        {loading ? (
+          <div className="text-center py-8">
+            <div className="inline-block animate-spin">
+              <div className="w-8 h-8 border-4 border-slate-600 border-t-blue-400 rounded-full"></div>
+            </div>
+            <p className="mt-3 text-slate-400">Loading tasks...</p>
+          </div>
+        ) : (
+          <TaskList
+            tasks={tasks}
+            onTaskComplete={handleCompleteTask}
+            onTaskDelete={handleDeleteTask}
+            isLoading={loading}
+            emptyMessage="No tasks for today. Great job! 🎉"
+          />
+        )}
+      </div>
+          {/* Stats Cards */}
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mt-6">
         <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
           <div className="flex items-center gap-2 mb-2">
             <Activity className="w-4 h-4 text-blue-400" />
@@ -148,27 +173,6 @@ export default function TodayTasksView() {
           {error}
         </div>
       )}
-
-      {/* Task List */}
-      <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
-        <h2 className="text-lg font-semibold mb-4">Today's Tasks</h2>
-        {loading ? (
-          <div className="text-center py-8">
-            <div className="inline-block animate-spin">
-              <div className="w-8 h-8 border-4 border-slate-600 border-t-blue-400 rounded-full"></div>
-            </div>
-            <p className="mt-3 text-slate-400">Loading tasks...</p>
-          </div>
-        ) : (
-          <TaskList
-            tasks={tasks}
-            onTaskComplete={handleCompleteTask}
-            onTaskDelete={handleDeleteTask}
-            isLoading={loading}
-            emptyMessage="No tasks for today. Great job! 🎉"
-          />
-        )}
-      </div>
     </div>
   );
 }
