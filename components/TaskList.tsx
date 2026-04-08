@@ -49,18 +49,18 @@ export default function TaskList({
           onClick={() =>
             setExpandedId(expandedId === task._id ? null : task._id)
           }
-          className="bg-slate-800 rounded-lg p-4 border border-slate-700 hover:border-slate-600 transition cursor-pointer"
+          className="bg-slate-800 rounded-lg p-3 sm:p-4 border border-slate-700 hover:border-slate-600 transition cursor-pointer"
         >
           {/* Top Section */}
-          <div className="flex items-start justify-between gap-4 mb-2">
+          <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-4 mb-2">
             <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-3 mb-2">
+              <div className="flex items-center gap-2 mb-2 flex-wrap">
                 {statusIcons[task.status]}
-                <h3 className="font-medium text-white truncate">
+                <h3 className="font-medium text-white text-sm sm:text-base truncate">
                   {task.title}
                 </h3>
                 <span
-                  className={`text-xs px-2 py-1 rounded border ${
+                  className={`text-xs px-2 py-1 rounded border flex-shrink-0 ${
                     priorityColors[task.priority]
                   }`}
                 >
@@ -70,20 +70,20 @@ export default function TaskList({
 
               {/* Short Description */}
               {task.description && (
-                <p className="text-sm text-slate-400 mb-2 line-clamp-1">
+                <p className="text-xs sm:text-sm text-slate-400 mb-2 line-clamp-1">
                   {task.description}
                 </p>
               )}
 
               {/* Meta */}
-              <div className="flex flex-wrap gap-2 items-center text-xs text-slate-400">
+              <div className="flex flex-wrap gap-1 sm:gap-2 items-center text-xs text-slate-400">
                 {task.category && (
-                  <span className="px-2 py-1 bg-slate-700 rounded">
+                  <span className="px-2 py-1 bg-slate-700 rounded truncate">
                     {task.category}
                   </span>
                 )}
                 {task.date && (
-                  <span className="px-2 py-1 bg-slate-700 rounded">
+                  <span className="px-2 py-1 bg-slate-700 rounded whitespace-nowrap">
                     {new Date(task.date).toLocaleDateString()}
                   </span>
                 )}
@@ -99,10 +99,10 @@ export default function TaskList({
                     onTaskComplete?.(task._id);
                   }}
                   disabled={isLoading}
-                  className="p-2 hover:bg-slate-700 rounded text-green-400 hover:text-green-300 disabled:opacity-50 transition"
+                  className="p-2 hover:bg-slate-700 rounded text-green-400 hover:text-green-300 disabled:opacity-50 transition flex-shrink-0"
                   title="Mark complete"
                 >
-                  <CheckCircle className="w-5 h-5" />
+                  <CheckCircle className="w-4 sm:w-5 h-4 sm:h-5" />
                 </button>
               )}
 
@@ -112,10 +112,10 @@ export default function TaskList({
                   onTaskDelete?.(task._id);
                 }}
                 disabled={isLoading}
-                className="p-2 hover:bg-slate-700 rounded text-red-400 hover:text-red-300 disabled:opacity-50 transition"
+                className="p-2 hover:bg-slate-700 rounded text-red-400 hover:text-red-300 disabled:opacity-50 transition flex-shrink-0"
                 title="Delete task"
               >
-                <Trash2 className="w-5 h-5" />
+                <Trash2 className="w-4 sm:w-5 h-4 sm:h-5" />
               </button>
             </div>
           </div>
@@ -125,7 +125,7 @@ export default function TaskList({
             <div className="mt-3 pt-3 border-t border-slate-700 space-y-3">
               {/* Full Description */}
               {task.description && (
-                <p className="text-sm text-slate-300">
+                <p className="text-xs sm:text-sm text-slate-300">
                   {task.description}
                 </p>
               )}
@@ -135,14 +135,14 @@ export default function TaskList({
                 <div className="space-y-2">
                   {task.resources.map((res, index) => (
                     <div key={index} className="flex flex-col">
-                      <p className="text-sm text-slate-300">
+                      <p className="text-xs sm:text-sm text-slate-300">
                         {res.label}
                       </p>
                       <a
                         href={res.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-yellow-500 text-sm hover:underline break-all"
+                        className="text-yellow-500 text-xs sm:text-sm hover:underline break-all"
                       >
                         {res.url}
                       </a>

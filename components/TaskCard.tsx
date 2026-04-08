@@ -54,11 +54,10 @@ export default function TaskCard({ task, onStatusChange, showWeekContext }: Prop
               <span className="text-[10px] text-ink-500 font-mono">{showWeekContext}</span>
             )}
           </div>
-          <div className={`font-medium text-sm ${task.status === "done" ? "line-through text-ink-400" : "text-ink-100"}`}>
+          <div className={`font-medium text-sm ${task.status === "completed" ? "line-through text-ink-400" : "text-ink-100"}`}>
             {task.title}
           </div>
           <div className="flex items-center gap-3 mt-1.5">
-            <span className="text-[11px] text-ink-500 font-mono">{task.estimatedMin} min</span>
             <span className={`text-[11px] font-mono ${statusMeta.color}`}>{statusMeta.label}</span>
           </div>
         </div>
@@ -70,7 +69,7 @@ export default function TaskCard({ task, onStatusChange, showWeekContext }: Prop
         <div className="border-t border-ink-700/40 px-4 py-3 space-y-3">
           <p className="text-sm text-ink-300 leading-relaxed">{task.description}</p>
 
-          {task.resources.length > 0 && (
+          {task.resources && task.resources.length > 0 && (
             <div>
               <div className="text-[10px] font-mono text-ink-500 uppercase tracking-widest mb-2">Resources</div>
               <div className="flex flex-col gap-1.5">
@@ -90,17 +89,13 @@ export default function TaskCard({ task, onStatusChange, showWeekContext }: Prop
             </div>
           )}
 
-          {task.notes && (
-            <div className="bg-ink-900/60 rounded-lg p-3 text-xs text-ink-400 font-mono">
-              {task.notes}
-            </div>
-          )}
+
 
           <div className="flex gap-2 flex-wrap pt-1">
             {(["pending", "in-progress", "done", "skipped"] as Task["status"][]).map((s) => (
               <button
                 key={s}
-                onClick={() => onStatusChange?.(task.id, s)}
+                onClick={() => onStatusChange?.(task._id, s)}
                 className={`text-[11px] px-3 py-1 rounded-full border font-mono transition-all
                   ${task.status === s
                     ? `${STATUS_META[s].color} border-current bg-current/10`

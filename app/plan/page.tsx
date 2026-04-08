@@ -65,15 +65,15 @@ export default function PlanPage() {
 
   return (
     <ErrorBoundary>
-      <div className="w-full min-h-screen bg-slate-900 text-white p-6">
+      <div className="w-full min-h-screen bg-slate-900 text-white p-4 sm:p-6 pt-16 md:pt-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold mb-2">Plan Your Day</h1>
-            <p className="text-slate-400">View and manage tasks for any date</p>
+          <div className="mb-6 sm:mb-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">Plan Your Day</h1>
+            <p className="text-sm sm:text-base text-slate-400">View and manage tasks for any date</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 sm:gap-6">
             {/* Calendar */}
             <div className="lg:col-span-1">
               <DatePicker onDateSelect={handleDateSelect} selectedDate={selectedDate} />
@@ -81,13 +81,13 @@ export default function PlanPage() {
 
             {/* Tasks for selected date */}
             <div className="lg:col-span-3">
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
-                <div className="flex items-center justify-between mb-6">
+              <div className="bg-slate-800/50 rounded-lg p-4 sm:p-6 border border-slate-700">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4 sm:mb-6">
                   <div className="flex items-center gap-3">
-                    <Calendar className="w-5 h-5 text-blue-400" />
+                    <Calendar className="w-4 sm:w-5 h-4 sm:h-5 text-blue-400 flex-shrink-0" />
                     <div>
-                      <h2 className="text-lg font-semibold">Tasks for {formattedDate}</h2>
-                      <p className="text-sm text-slate-400">{tasks.length} tasks</p>
+                      <h2 className="text-base sm:text-lg font-semibold">Tasks for {formattedDate}</h2>
+                      <p className="text-xs sm:text-sm text-slate-400">{tasks.length} tasks</p>
                     </div>
                   </div>
                 </div>

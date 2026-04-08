@@ -15,16 +15,16 @@ export default function DashboardPage() {
 
   return (
     <ErrorBoundary>
-      <div className="w-full min-h-screen bg-slate-900 text-white p-6">
+      <div className="w-full min-h-screen bg-slate-900 text-white p-4 sm:p-6 pt-16 md:pt-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold mb-2">Task Dashboard</h1>
-            <p className="text-slate-400">Manage your tasks and track productivity</p>
+          <div className="mb-6 sm:mb-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">Task Dashboard</h1>
+            <p className="text-sm sm:text-base text-slate-400">Manage your tasks and track productivity</p>
           </div>
 
           {/* Main content grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
             {/* Left column - Today's tasks (spans 2 columns on large screens) */}
             <div className="lg:col-span-2 ">
               <AllTasksView />

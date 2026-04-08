@@ -113,64 +113,72 @@ export default function AllTasksView() {
   return (
     <div className="w-full max-w-4xl mx-auto">
       {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
-        <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3 mb-4 sm:mb-6">
+        <div className="bg-slate-800 rounded-lg p-3 sm:p-4 border border-slate-700">
           <div className="flex items-center gap-2 mb-2">
-            <Activity className="w-4 h-4 text-blue-400" />
+            <Activity className="w-3 sm:w-4 h-3 sm:h-4 text-blue-400 flex-shrink-0" />
             <span className="text-xs text-slate-400">Total</span>
           </div>
-          <p className="text-2xl font-bold">{stats.total}</p>
+          <p className="text-xl sm:text-2xl font-bold">{stats.total}</p>
         </div>
 
-        <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
-          <CheckCircle2 className="w-4 h-4 text-green-400 mb-2" />
-          <p className="text-xs text-slate-400">Completed</p>
-          <p className="text-2xl font-bold text-green-400">
+        <div className="bg-slate-800 rounded-lg p-3 sm:p-4 border border-slate-700">
+          <div className="flex items-center gap-2 mb-2">
+            <CheckCircle2 className="w-3 sm:w-4 h-3 sm:h-4 text-green-400 flex-shrink-0" />
+            <span className="text-xs text-slate-400">Completed</span>
+          </div>
+          <p className="text-xl sm:text-2xl font-bold text-green-400">
             {stats.completed}
           </p>
         </div>
 
-        <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
-          <Clock className="w-4 h-4 text-yellow-400 mb-2" />
-          <p className="text-xs text-slate-400">Pending</p>
-          <p className="text-2xl font-bold text-yellow-400">
+        <div className="bg-slate-800 rounded-lg p-3 sm:p-4 border border-slate-700">
+          <div className="flex items-center gap-2 mb-2">
+            <Clock className="w-3 sm:w-4 h-3 sm:h-4 text-yellow-400 flex-shrink-0" />
+            <span className="text-xs text-slate-400">Pending</span>
+          </div>
+          <p className="text-xl sm:text-2xl font-bold text-yellow-400">
             {stats.pending}
           </p>
         </div>
 
-        <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
-          <AlertCircle className="w-4 h-4 text-orange-400 mb-2" />
-          <p className="text-xs text-slate-400">Incomplete</p>
-          <p className="text-2xl font-bold text-orange-400">
+        <div className="bg-slate-800 rounded-lg p-3 sm:p-4 border border-slate-700">
+          <div className="flex items-center gap-2 mb-2">
+            <AlertCircle className="w-3 sm:w-4 h-3 sm:h-4 text-orange-400 flex-shrink-0" />
+            <span className="text-xs text-slate-400">Incomplete</span>
+          </div>
+          <p className="text-xl sm:text-2xl font-bold text-orange-400">
             {stats.incomplete}
           </p>
         </div>
 
-        <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
-          <Zap className="w-4 h-4 text-purple-400 mb-2" />
-          <p className="text-xs text-slate-400">Progress</p>
-          <p className="text-2xl font-bold text-purple-400">
+        <div className="bg-slate-800 rounded-lg p-3 sm:p-4 border border-slate-700">
+          <div className="flex items-center gap-2 mb-2">
+            <Zap className="w-3 sm:w-4 h-3 sm:h-4 text-purple-400 flex-shrink-0" />
+            <span className="text-xs text-slate-400">Progress</span>
+          </div>
+          <p className="text-xl sm:text-2xl font-bold text-purple-400">
             {stats.completionRate}%
           </p>
         </div>
       </div>
 
       {/* Filter UI */}
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-lg font-semibold text-white">Tasks</h2>
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+        <h2 className="text-base sm:text-lg font-semibold text-white">Tasks</h2>
 
         <div className="flex items-center gap-2">
           <input
             type="date"
             value={selectedDate}
             onChange={(e) => setSelectedDate(e.target.value)}
-            className="px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            className="px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"
           />
 
           {selectedDate && (
             <button
               onClick={() => setSelectedDate("")}
-              className="text-xs px-3 py-2 bg-slate-700 hover:bg-slate-600 rounded text-white"
+              className="text-xs px-3 py-2 bg-slate-700 hover:bg-slate-600 rounded text-white whitespace-nowrap"
             >
               Clear
             </button>

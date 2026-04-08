@@ -75,13 +75,13 @@ export const AddTaskForm: React.FC<AddTaskFormProps> = ({
   };
 
   return (
-    <div className="max-w-2xl mx-auto bg-slate-800 border border-slate-700 rounded-2xl shadow-lg p-6">
-      <h2 className="text-xl font-semibold text-white mb-4">
+    <div className="max-w-2xl mx-auto bg-slate-800 border border-slate-700 rounded-2xl shadow-lg p-4 sm:p-6">
+      <h2 className="text-lg sm:text-xl font-semibold text-white mb-4">
         ➕ Add New Task
       </h2>
 
       {error && (
-        <div className="mb-4 p-3 rounded bg-red-500/10 border border-red-500/30 text-red-400 text-sm">
+        <div className="mb-4 p-3 rounded bg-red-500/10 border border-red-500/30 text-red-400 text-xs sm:text-sm">
           {error}
         </div>
       )}
@@ -89,7 +89,7 @@ export const AddTaskForm: React.FC<AddTaskFormProps> = ({
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Title */}
         <div>
-          <label className="block text-sm text-slate-300 mb-1">
+          <label className="block text-xs sm:text-sm text-slate-300 mb-1">
             Task Title *
           </label>
           <input
@@ -98,13 +98,13 @@ export const AddTaskForm: React.FC<AddTaskFormProps> = ({
             value={formData.title}
             onChange={handleChange}
             placeholder="Enter task title"
-            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            className="w-full px-3 py-2 text-sm rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
           />
         </div>
 
         {/* Description */}
         <div>
-          <label className="block text-sm text-slate-300 mb-1">
+          <label className="block text-xs sm:text-sm text-slate-300 mb-1">
             Description
           </label>
           <textarea
@@ -113,13 +113,13 @@ export const AddTaskForm: React.FC<AddTaskFormProps> = ({
             onChange={handleChange}
             placeholder="Optional description..."
             rows={3}
-            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            className="w-full px-3 py-2 text-sm rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
           />
         </div>
 
         {/* Date */}
         <div>
-          <label className="block text-sm text-slate-300 mb-1">
+          <label className="block text-xs sm:text-sm text-slate-300 mb-1">
             Due Date
           </label>
           <input
@@ -127,21 +127,21 @@ export const AddTaskForm: React.FC<AddTaskFormProps> = ({
             type="date"
             value={formData.date || ""}
             onChange={handleChange}
-            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            className="w-full px-3 py-2 text-sm rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
           />
         </div>
 
         {/* Category & Priority */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm text-slate-300 mb-1">
+            <label className="block text-xs sm:text-sm text-slate-300 mb-1">
               Category
             </label>
             <select
               name="category"
               value={formData.category}
               onChange={handleChange}
-              className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+              className="w-full px-3 py-2 text-sm rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
             >
               {categories.map((cat) => (
                 <option key={cat} value={cat}>
@@ -152,14 +152,14 @@ export const AddTaskForm: React.FC<AddTaskFormProps> = ({
           </div>
 
           <div>
-            <label className="block text-sm text-slate-300 mb-1">
+            <label className="block text-xs sm:text-sm text-slate-300 mb-1">
               Priority
             </label>
             <select
               name="priority"
               value={formData.priority}
               onChange={handleChange}
-              className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+              className="w-full px-3 py-2 text-sm rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
             >
               {priorities.map((pri) => (
                 <option key={pri} value={pri}>
@@ -174,7 +174,7 @@ export const AddTaskForm: React.FC<AddTaskFormProps> = ({
         <button
           type="submit"
           disabled={loading}
-          className="w-full py-2 rounded-lg bg-yellow-500 text-black font-medium hover:bg-yellow-400 transition disabled:opacity-50"
+          className="w-full py-2 text-sm sm:text-base rounded-lg bg-yellow-500 text-black font-medium hover:bg-yellow-400 transition disabled:opacity-50"
         >
           {loading ? "Adding..." : "Add Task"}
         </button>

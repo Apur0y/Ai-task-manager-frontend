@@ -101,14 +101,14 @@ export default function TodayTasksView() {
   
 
       {/* Task List */}
-      <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
-        <h2 className="text-lg font-semibold mb-4">Today's Tasks</h2>
+      <div className="bg-slate-800/50 rounded-lg p-4 sm:p-6 border border-slate-700">
+        <h2 className="text-base sm:text-lg font-semibold mb-4">Today's Tasks</h2>
         {loading ? (
           <div className="text-center py-8">
             <div className="inline-block animate-spin">
               <div className="w-8 h-8 border-4 border-slate-600 border-t-blue-400 rounded-full"></div>
             </div>
-            <p className="mt-3 text-slate-400">Loading tasks...</p>
+            <p className="mt-3 text-slate-400 text-sm">Loading tasks...</p>
           </div>
         ) : (
           <TaskList
@@ -121,47 +121,47 @@ export default function TodayTasksView() {
         )}
       </div>
           {/* Stats Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mt-6">
-        <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3 mt-4 sm:mt-6">
+        <div className="bg-slate-800 rounded-lg p-3 sm:p-4 border border-slate-700">
           <div className="flex items-center gap-2 mb-2">
-            <Activity className="w-4 h-4 text-blue-400" />
+            <Activity className="w-3 sm:w-4 h-3 sm:h-4 text-blue-400 flex-shrink-0" />
             <span className="text-xs text-slate-400">Total</span>
           </div>
-          <p className="text-2xl font-bold">{stats.total}</p>
+          <p className="text-xl sm:text-2xl font-bold">{stats.total}</p>
         </div>
 
-        <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
+        <div className="bg-slate-800 rounded-lg p-3 sm:p-4 border border-slate-700">
           <div className="flex items-center gap-2 mb-2">
-            <CheckCircle2 className="w-4 h-4 text-green-400" />
+            <CheckCircle2 className="w-3 sm:w-4 h-3 sm:h-4 text-green-400 flex-shrink-0" />
             <span className="text-xs text-slate-400">Completed</span>
           </div>
-          <p className="text-2xl font-bold text-green-400">{stats.completed}</p>
+          <p className="text-xl sm:text-2xl font-bold text-green-400">{stats.completed}</p>
         </div>
 
-        <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
+        <div className="bg-slate-800 rounded-lg p-3 sm:p-4 border border-slate-700">
           <div className="flex items-center gap-2 mb-2">
-            <Clock className="w-4 h-4 text-yellow-400" />
+            <Clock className="w-3 sm:w-4 h-3 sm:h-4 text-yellow-400 flex-shrink-0" />
             <span className="text-xs text-slate-400">Pending</span>
           </div>
-          <p className="text-2xl font-bold text-yellow-400">
+          <p className="text-xl sm:text-2xl font-bold text-yellow-400">
             {stats.pending}
           </p>
         </div>
 
-        <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
+        <div className="bg-slate-800 rounded-lg p-3 sm:p-4 border border-slate-700">
           <div className="flex items-center gap-2 mb-2">
-            <AlertCircle className="w-4 h-4 text-orange-400" />
+            <AlertCircle className="w-3 sm:w-4 h-3 sm:h-4 text-orange-400 flex-shrink-0" />
             <span className="text-xs text-slate-400">Incomplete</span>
           </div>
-          <p className="text-2xl font-bold text-orange-400">{stats.incomplete}</p>
+          <p className="text-xl sm:text-2xl font-bold text-orange-400">{stats.incomplete}</p>
         </div>
 
-        <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
+        <div className="bg-slate-800 rounded-lg p-3 sm:p-4 border border-slate-700">
           <div className="flex items-center gap-2 mb-2">
-            <Zap className="w-4 h-4 text-purple-400" />
+            <Zap className="w-3 sm:w-4 h-3 sm:h-4 text-purple-400 flex-shrink-0" />
             <span className="text-xs text-slate-400">Progress</span>
           </div>
-          <p className="text-2xl font-bold text-purple-400">
+          <p className="text-xl sm:text-2xl font-bold text-purple-400">
             {stats.completionRate}%
           </p>
         </div>
@@ -169,7 +169,7 @@ export default function TodayTasksView() {
 
       {/* Error Message */}
       {error && (
-        <div className="mb-4 p-4 bg-red-900/20 border border-red-700 rounded-lg text-red-200">
+        <div className="mb-4 p-3 sm:p-4 bg-red-900/20 border border-red-700 rounded-lg text-red-200 text-sm">
           {error}
         </div>
       )}

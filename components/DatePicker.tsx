@@ -54,20 +54,20 @@ export default function DatePicker({
   });
 
   return (
-    <div className="bg-slate-800 rounded-lg p-4 border border-slate-700 w-full max-w-sm">
+    <div className="bg-slate-800 rounded-lg p-3 sm:p-4 border border-slate-700 w-full max-w-sm">
       <div className="flex items-center justify-between mb-4">
         <button
           onClick={previousMonth}
           className="p-1 hover:bg-slate-700 rounded text-slate-300 hover:text-white transition"
         >
-          <ChevronLeft className="w-5 h-5" />
+          <ChevronLeft className="w-4 sm:w-5 h-4 sm:h-5" />
         </button>
-        <h3 className="font-semibold text-white">{monthYear}</h3>
+        <h3 className="font-semibold text-white text-sm sm:text-base">{monthYear}</h3>
         <button
           onClick={nextMonth}
           className="p-1 hover:bg-slate-700 rounded text-slate-300 hover:text-white transition"
         >
-          <ChevronRight className="w-5 h-5" />
+          <ChevronRight className="w-4 sm:w-5 h-4 sm:h-5" />
         </button>
       </div>
 
@@ -76,7 +76,7 @@ export default function DatePicker({
           {["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"].map((day) => (
             <div
               key={day}
-              className="text-center text-xs text-slate-400 font-medium h-8 flex items-center justify-center"
+              className="text-center text-xs text-slate-400 font-medium h-7 sm:h-8 flex items-center justify-center"
             >
               {day}
             </div>
@@ -85,7 +85,7 @@ export default function DatePicker({
 
         <div className="grid grid-cols-7 gap-1">
           {Array.from({ length: firstDay }, () => null).map((_, i) => (
-            <div key={`empty-${i}`} className="h-8"></div>
+            <div key={`empty-${i}`} className="h-7 sm:h-8"></div>
           ))}
           {days.map((day) => {
             const dateStr = `${currentDate.getFullYear()}-${String(
@@ -100,7 +100,7 @@ export default function DatePicker({
               <button
                 key={day}
                 onClick={() => selectDate(day)}
-                className={`h-8 rounded text-sm font-medium transition ${
+                className={`h-7 sm:h-8 rounded text-xs sm:text-sm font-medium transition ${
                   isSelected
                     ? "bg-blue-600 text-white"
                     : isToday

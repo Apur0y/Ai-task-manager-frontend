@@ -38,23 +38,23 @@ export default function ProgressChart() {
   };
 
   return (
-    <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
-      <div className="flex items-center justify-between mb-6">
+    <div className="bg-slate-800/50 rounded-lg p-4 sm:p-6 border border-slate-700">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 sm:mb-6">
         <div className="flex items-center gap-3">
-          <BarChart3 className="w-5 h-5 text-blue-400" />
-          <h3 className="text-lg font-semibold">Progress by Category</h3>
+          <BarChart3 className="w-4 sm:w-5 h-4 sm:h-5 text-blue-400 flex-shrink-0" />
+          <h3 className="text-base sm:text-lg font-semibold">Progress by Category</h3>
         </div>
         <button
           onClick={loadCategoryStats}
           disabled={loading}
-          className="px-3 py-1 text-sm bg-blue-600 hover:bg-blue-700 disabled:bg-slate-600 text-white rounded transition"
+          className="px-3 py-1 text-xs sm:text-sm bg-blue-600 hover:bg-blue-700 disabled:bg-slate-600 text-white rounded transition flex-shrink-0"
         >
           Refresh
         </button>
       </div>
 
       {error && (
-        <div className="mb-4 p-3 bg-red-900/20 border border-red-700 rounded text-red-200 text-sm">
+        <div className="mb-4 p-3 bg-red-900/20 border border-red-700 rounded text-red-200 text-xs sm:text-sm">
           {error}
         </div>
       )}
@@ -64,7 +64,7 @@ export default function ProgressChart() {
           <div className="inline-block animate-spin mb-2">
             <div className="w-6 h-6 border-3 border-slate-600 border-t-blue-400 rounded-full"></div>
           </div>
-          <p>Loading statistics...</p>
+          <p className="text-xs sm:text-sm">Loading statistics...</p>
         </div>
       ) : stats.length === 0 ? (
         <div className="text-center py-8 text-slate-400">
@@ -74,18 +74,18 @@ export default function ProgressChart() {
         <div className="space-y-4">
           {stats.map((stat) => (
             <div key={stat.category}>
-              <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-2">
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <div className="flex items-center gap-2 min-w-0">
                   <div
-                    className={`w-3 h-3 rounded-full ${
+                    className={`w-3 h-3 rounded-full flex-shrink-0 ${
                       categoryColors[stat.category as keyof typeof categoryColors]
                     }`}
                   ></div>
-                  <span className="text-sm font-medium capitalize">
+                  <span className="text-xs sm:text-sm font-medium capitalize">
                     {stat.category}
                   </span>
                 </div>
-                <span className="text-sm text-slate-300">
+                <span className="text-xs sm:text-sm text-slate-300 flex-shrink-0">
                   {stat.completed} / {stat.total}
                 </span>
               </div>

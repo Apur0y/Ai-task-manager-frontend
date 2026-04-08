@@ -2,6 +2,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+interface SidebarProps {
+  isOpen?: boolean;
+  onClose?: () => void;
+}
+
 const nav = [
   { href: "/",           label: "Today",     icon: "◉" },
   { href: "/plan",       label: "Plan",      icon: "≡" },
@@ -9,11 +14,12 @@ const nav = [
   { href: "/dashboard",  label: "Dashboard", icon: "⬡" },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
   const path = usePathname();
 
   return (
-    <aside className="fixed left-0 top-0 h-screen w-[220px] bg-ink-900 border-r border-ink-700/50 flex flex-col z-50">
+    <aside className={`fixed md:static left-0 top-0 h-screen w-[220px] bg-ink-900 border-r border-ink-700/50 flex flex-col z-40 transition-transform duration-300 md:translate-x-0
+      ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
       <div className="px-6 pt-8 pb-6 border-b border-ink-700/40">
         <div className="font-display text-xs tracking-[0.2em] uppercase text-ink-400 mb-1">Dev</div>
         <div className="font-display text-lg font-semibold text-ink-50">Tracker</div>
@@ -27,6 +33,7 @@ export default function Sidebar() {
             <Link
               key={item.href}
               href={item.href}
+              onClick={onClose}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all duration-150 group
                 ${active
                   ? "bg-ink-700/80 text-ink-50"

@@ -53,16 +53,16 @@ export default function ResourcesPage() {
 
   return (
     <ErrorBoundary>
-      <div className="w-full min-h-screen bg-slate-900 text-white p-6">
+      <div className="w-full min-h-screen bg-slate-900 text-white p-4 sm:p-6 pt-16 md:pt-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold mb-2">Resources & Tasks</h1>
-            <p className="text-slate-400">Organize your learning materials and resources</p>
+          <div className="mb-6 sm:mb-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">Resources & Tasks</h1>
+            <p className="text-sm sm:text-base text-slate-400">Organize your learning materials and resources</p>
           </div>
 
           {error && (
-            <div className="mb-6 p-4 bg-red-900/20 border border-red-700 rounded text-red-200">
+            <div className="mb-6 p-4 bg-red-900/20 border border-red-700 rounded text-red-200 text-sm">
               {error}
             </div>
           )}
@@ -75,15 +75,15 @@ export default function ResourcesPage() {
               <p className="text-slate-400">Loading resources...</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 sm:gap-6">
               {/* Category sidebar */}
               <div className="lg:col-span-1">
                 <div className="bg-slate-800 rounded-lg p-4 border border-slate-700 sticky top-6">
-                  <h3 className="font-semibold mb-4">Categories</h3>
+                  <h3 className="font-semibold mb-4 text-sm sm:text-base">Categories</h3>
                   <div className="space-y-2">
                     <button
                       onClick={() => setSelectedCategory(null)}
-                      className={`w-full text-left px-3 py-2 rounded transition ${
+                      className={`w-full text-left px-3 py-2 rounded transition text-sm ${
                         selectedCategory === null
                           ? "bg-blue-600 text-white"
                           : "hover:bg-slate-700 text-slate-300"
@@ -95,7 +95,7 @@ export default function ResourcesPage() {
                       <button
                         key={category}
                         onClick={() => setSelectedCategory(category)}
-                        className={`w-full text-left px-3 py-2 rounded transition ${
+                        className={`w-full text-left px-3 py-2 rounded transition text-sm truncate ${
                           selectedCategory === category
                             ? "bg-blue-600 text-white"
                             : "hover:bg-slate-700 text-slate-300"
@@ -115,10 +115,10 @@ export default function ResourcesPage() {
               <div className="lg:col-span-3">
                 {selectedCategory === null
                   ? categories.map((category) => (
-                      <div key={category} className="mb-8">
-                        <h2 className="text-xl font-semibold mb-4 capitalize flex items-center gap-2">
+                      <div key={category} className="mb-6 sm:mb-8">
+                        <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 capitalize flex items-center gap-2">
                           <div
-                            className={`w-3 h-3 rounded-full ${
+                            className={`w-3 h-3 rounded-full flex-shrink-0 ${
                               categoryColors[
                                 category as keyof typeof categoryColors
                               ]?.split(" ")[0]
@@ -137,7 +137,7 @@ export default function ResourcesPage() {
                     ))
                   : (
                       <div>
-                        <h2 className="text-xl font-semibold mb-4 capitalize">
+                        <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 capitalize">
                           {selectedCategory === "uncategorized"
                             ? "Uncategorized"
                             : selectedCategory}
@@ -167,19 +167,19 @@ function ResourceCard({ task }: { task: Task }) {
 
   return (
     <div
-      className={`rounded-lg p-4 border transition ${
+      className={`rounded-lg p-3 sm:p-4 border transition ${
         statusColors[task.status]
       }`}
     >
-      <div className="flex items-start justify-between gap-4 mb-2">
-        <div className="flex-1">
-          <h3 className="font-medium text-white mb-1">{task.title}</h3>
+      <div className="flex flex-col sm:flex-row items-start justify-between gap-2 sm:gap-4 mb-2">
+        <div className="flex-1 min-w-0">
+          <h3 className="font-medium text-white mb-1 text-sm sm:text-base break-words">{task.title}</h3>
           {task.description && (
-            <p className="text-sm text-slate-300 mb-2">{task.description}</p>
+            <p className="text-xs sm:text-sm text-slate-300 mb-2 line-clamp-2">{task.description}</p>
           )}
         </div>
         <span
-          className={`text-xs px-2 py-1 rounded whitespace-nowrap ${
+          className={`text-xs px-2 py-1 rounded whitespace-nowrap flex-shrink-0 ${
             task.priority === "high"
               ? "bg-red-500/20 text-red-400"
               : task.priority === "medium"
@@ -191,7 +191,7 @@ function ResourceCard({ task }: { task: Task }) {
         </span>
       </div>
 
-      <div className="flex flex-wrap gap-2 items-center mb-3">
+      <div className="flex flex-wrap gap-1 sm:gap-2 items-center mb-3">
         <span className="text-xs px-2 py-1 bg-slate-700 rounded">
           {new Date(task.date).toLocaleDateString()}
         </span>
