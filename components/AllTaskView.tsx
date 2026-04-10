@@ -2,7 +2,15 @@
 
 import { useEffect, useState } from "react";
 import { Task, taskService } from "@/lib/taskService";
-import { Activity, CheckCircle2, Clock, AlertCircle, Zap, Calendar, ChevronDown } from "lucide-react";
+import {
+  Activity,
+  CheckCircle2,
+  Clock,
+  AlertCircle,
+  Zap,
+  Calendar,
+  ChevronDown,
+} from "lucide-react";
 import TaskList from "./TaskList";
 
 interface TaskStats {
@@ -52,7 +60,9 @@ function getWeekLabel(weekKey: string): string {
   return "";
 }
 
-function groupTasksByWeek(tasks: Task[]): { key: string; label: string; range: string; tasks: Task[] }[] {
+function groupTasksByWeek(
+  tasks: Task[],
+): { key: string; label: string; range: string; tasks: Task[] }[] {
   const map: Record<string, Task[]> = {};
   tasks.forEach((task) => {
     if (!task.date) return;
@@ -60,13 +70,9 @@ function groupTasksByWeek(tasks: Task[]): { key: string; label: string; range: s
     if (!map[key]) map[key] = [];
     map[key].push(task);
   });
-  const currentKey = getWeekKey(new Date().toISOString());
   return Object.keys(map)
-    .sort((a, b) => {
-      if (a === currentKey) return -1;
-      if (b === currentKey) return 1;
-      return b.localeCompare(a); // past weeks descending
-    })
+    .sort()
+    .reverse()
     .map((key) => ({
       key,
       label: getWeekLabel(key),
@@ -114,13 +120,13 @@ export default function AllTasksView() {
 
       // Stats calculation
       const completed = taskList.filter(
-        (t: Task) => t.status === "completed"
+        (t: Task) => t.status === "completed",
       ).length;
       const pending = taskList.filter(
-        (t: Task) => t.status === "pending"
+        (t: Task) => t.status === "pending",
       ).length;
       const incomplete = taskList.filter(
-        (t: Task) => t.status === "incomplete"
+        (t: Task) => t.status === "incomplete",
       ).length;
 
       setStats({
@@ -134,9 +140,7 @@ export default function AllTasksView() {
             : 0,
       });
     } catch (err) {
-      setError(
-        err instanceof Error ? err.message : "Failed to load tasks"
-      );
+      setError(err instanceof Error ? err.message : "Failed to load tasks");
     } finally {
       setLoading(false);
     }
@@ -146,9 +150,7 @@ export default function AllTasksView() {
   const filteredTasks = selectedDate
     ? tasks.filter((task) => {
         if (!task.date) return false;
-        const taskDate = new Date(task.date)
-          .toISOString()
-          .split("T")[0];
+        const taskDate = new Date(task.date).toISOString().split("T")[0];
         return taskDate === selectedDate;
       })
     : tasks;
@@ -158,23 +160,18 @@ export default function AllTasksView() {
       await taskService.markTaskComplete(taskId);
       await loadTodayTasks();
     } catch (err) {
-      setError(
-        err instanceof Error ? err.message : "Failed to complete task"
-      );
+      setError(err instanceof Error ? err.message : "Failed to complete task");
     }
   };
 
   const handleDeleteTask = async (taskId: string) => {
-    if (!confirm("Are you sure you want to delete this task?"))
-      return;
+    if (!confirm("Are you sure you want to delete this task?")) return;
 
     try {
       await taskService.deleteTask(taskId);
       await loadTodayTasks();
     } catch (err) {
-      setError(
-        err instanceof Error ? err.message : "Failed to delete task"
-      );
+      setError(err instanceof Error ? err.message : "Failed to delete task");
     }
   };
 
@@ -284,18 +281,23 @@ export default function AllTasksView() {
           </div>
         ) : weekGroups.length === 0 ? (
           <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700 text-center py-8 text-slate-400">
-            {selectedDate ? "No tasks for selected date 📅" : "No tasks found 🎉"}
+            {selectedDate
+              ? "No tasks for selected date 📅"
+              : "No tasks found 🎉"}
           </div>
         ) : (
-          weekGroups.map((group) => {
+          [...weekGroups].reverse().map((group) => {
             const isOpen = openWeeks.has(group.key);
+
             const completedCount = group.tasks.filter(
-              (t) => t.status === "completed"
+              (t) => t.status === "completed",
             ).length;
+
             const pct =
               group.tasks.length > 0
                 ? Math.round((completedCount / group.tasks.length) * 100)
                 : 0;
+
             const isCurrentWeek = group.label === "This week";
 
             return (
@@ -341,7 +343,9 @@ export default function AllTasksView() {
                         )}
                       </div>
                       <p className="text-xs text-slate-500 mt-0.5">
-                        {group.tasks.length} task{group.tasks.length !== 1 ? "s" : ""} · {completedCount} completed
+                        {group.tasks.length} task
+                        {group.tasks.length !== 1 ? "s" : ""} · {completedCount}{" "}
+                        completed
                       </p>
                     </div>
                   </div>
