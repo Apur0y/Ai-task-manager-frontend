@@ -21,7 +21,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       {/* Main content */}
-      <main className="flex-1 w-full md:ml-[220px] min-h-screen transition-all">
+      <main className="flex-1 w-full  min-h-screen transition-all">
         {children}
       </main>
 
